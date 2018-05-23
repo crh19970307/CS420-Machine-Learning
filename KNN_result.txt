@@ -1,0 +1,4 @@
+pca_ratio = 0.55n_components = 1 accuracy = 0.84
+pca_ratio = 0.55n_components = 3 accuracy = 0.824
+pca_ratio = 0.55n_components = 5 accuracy = 0.846
+pca_ratio = 0.55n_components = 7 accuracy = 0.842

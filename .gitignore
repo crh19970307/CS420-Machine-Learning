@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+new_train_data
+mnist_train/
+
 # C extensions
 *.so
 
