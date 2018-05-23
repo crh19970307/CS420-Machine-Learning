@@ -3,12 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-<<<<<<< HEAD
-=======
 new_train_data
 mnist_train/
 
->>>>>>> 7c24101... modify gitignore
 # C extensions
 *.so
 
