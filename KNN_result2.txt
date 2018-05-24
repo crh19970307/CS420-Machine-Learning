@@ -1,0 +1,9 @@
+pca_ratio = 0.75 n_components = 1 accuracy = 0.983
+pca_ratio = 0.75 n_components = 2 accuracy = 0.9714
+pca_ratio = 0.75 n_components = 3 accuracy = 0.9725
+pca_ratio = 0.8 n_components = 1 accuracy = 0.984
+pca_ratio = 0.8 n_components = 2 accuracy = 0.9724
+pca_ratio = 0.8 n_components = 3 accuracy = 0.9726
+pca_ratio = 0.85 n_components = 1 accuracy = 0.984
+pca_ratio = 0.85 n_components = 2 accuracy = 0.9711
+pca_ratio = 0.85 n_components = 3 accuracy = 0.9716

@@ -1,0 +1,2 @@
+KNN: PCA_ratio=0.8, n_components=1 Accuracy=98.4%
+
