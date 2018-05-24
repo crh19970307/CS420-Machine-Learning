@@ -1,0 +1,12 @@
+pca_ratio = 0.5 gamma = 4e-07 accuracy = 0.76
+pca_ratio = 0.5 gamma = 6e-07 accuracy = 0.76
+pca_ratio = 0.5 gamma = 1e-06 accuracy = 0.76
+pca_ratio = 0.5 gamma = 1.5e-06 accuracy = 0.76
+pca_ratio = 0.5 gamma = 5e-06 accuracy = 0.76
+pca_ratio = 0.5 gamma = 1e-05 accuracy = 0.76
+pca_ratio = 0.5 gamma = 0.0001 accuracy = 0.76
+pca_ratio = 0.55 gamma = 4e-07 accuracy = 0.7666666666666667
+pca_ratio = 0.55 gamma = 6e-07 accuracy = 0.7666666666666667
+pca_ratio = 0.55 gamma = 1e-06 accuracy = 0.7666666666666667
+pca_ratio = 0.55 gamma = 1.5e-06 accuracy = 0.7666666666666667
+pca_ratio = 0.55 gamma = 5e-06 accuracy = 0.7666666666666667
