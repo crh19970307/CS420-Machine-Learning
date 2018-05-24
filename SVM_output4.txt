@@ -1,0 +1,16 @@
+pca_ratio = 0.6  C = 4  gamma = 6e-07Accuracy = 0.9236
+pca_ratio = 0.6  C = 4  gamma = 8e-07Accuracy = 0.928
+pca_ratio = 0.6  C = 4  gamma = 1e-06Accuracy = 0.9269
+pca_ratio = 0.6  C = 4  gamma = 1.2e-06Accuracy = 0.9266
+pca_ratio = 0.6  C = 6  gamma = 6e-07Accuracy = 0.9244
+pca_ratio = 0.6  C = 6  gamma = 8e-07Accuracy = 0.9275
+pca_ratio = 0.6  C = 6  gamma = 1e-06Accuracy = 0.9266
+pca_ratio = 0.6  C = 6  gamma = 1.2e-06Accuracy = 0.9261
+pca_ratio = 0.65  C = 4  gamma = 6e-07Accuracy = 0.9325
+pca_ratio = 0.65  C = 4  gamma = 8e-07Accuracy = 0.9327
+pca_ratio = 0.65  C = 4  gamma = 1e-06Accuracy = 0.9315
+pca_ratio = 0.65  C = 4  gamma = 1.2e-06Accuracy = 0.9285
+pca_ratio = 0.65  C = 6  gamma = 6e-07Accuracy = 0.9328
+pca_ratio = 0.65  C = 6  gamma = 8e-07Accuracy = 0.9322
+pca_ratio = 0.65  C = 6  gamma = 1e-06Accuracy = 0.9322
+pca_ratio = 0.65  C = 6  gamma = 1.2e-06Accuracy = 0.9284
