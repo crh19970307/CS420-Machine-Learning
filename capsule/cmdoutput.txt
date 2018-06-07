@@ -1,0 +1,7 @@
+# parameters: 17229033
+[Epoch 1] Training Loss: 0.6198 (Accuracy: 52.27%)
+[Epoch 1] Testing Loss: 0.5452 (Accuracy: 88.59%)
+[Epoch 2] Training Loss: 0.5216 (Accuracy: 92.74%)
+[Epoch 2] Testing Loss: 0.5145 (Accuracy: 94.84%)
+[Epoch 3] Training Loss: 0.5048 (Accuracy: 95.55%)
+[Epoch 3] Testing Loss: 0.5060 (Accuracy: 95.98%)
