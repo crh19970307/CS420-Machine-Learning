@@ -162,8 +162,27 @@ Finally, we will center the digital area right in the middle of the image. We wa
 So far, we have finished our preprocessing steps, and the images are ready to be feed into the traditional models. For more detailed explanations of these preprocessing steps, please refer to the comments in our code in file \texttt{preprocessing.py}.
 
 \subsection{K-Nearest Neighbors}
+In this part, we utilize the simplest classifier, the k-nearest neighbors algorithm, or KNN, on the given data set as well as our processed data set. KNN is a non-parametric model. An test data sample is classified by a majority vote of its neighbors. More specifically, the data point is assigned to the class most common among its $k$ nearest neighbors. 
+
+The reason we choose this algorithm is that we are clear KNN is very sensible to the shifting of the digits in the image. By comparing the KNN output on the given data set with its output on our processed data set, we can easily check whether our preprocessing step is helpful or not, and to what extent the preprocessing helps improve the performance. 
+
+Before we perform KNN on the data sets, we first refer to Principal Component Analysis, or PCA, to reduce the dimensionality of the data sets. We will not dig into the theoretic details of PCA (and KNN) in this report since they are well covered in the course lectures. All we need to care about is the specific PCA ratio will have a significant influence on the performance of our models. The scikit-learn library provides the PCA and KNeighborsClassifier classes so that we can safely rely on these modules to achieve our goal. For more detailed implementation of this part, please refer to our codes in file \texttt{KNN\_without\_preprocessing.py} and \texttt{KNN.py}.
+
+Throughout our experiments, we use the simple hold-out validation, and randomly select 30\% of the training samples as our validation set. We test the KNN performance of different setting of parameters on the validation set, and select the parameter values with highest accuracy to feed into the model on the test set.
+
+\subsubsection{Influence of PCA Ratio}
+In this part, we test the influence of PCA ratio on KNN. We enumerate the PCA ratio value from $0.4$ to $1.0$, and for each PCA ratio value, we enumerate the value of $k$ on the validation set to find the optimal value under the current PCA ratio. Since this nested iteration process is relatively time consuming, we only use 10000 training samples and 3000 testing samples in this part. From Homework 3 we know that the size of training samples will indeed influence the performance of our model, but we believe the trend of the performance will not vary much. The performance of KNN on the given data set and our processed data set under different PCA ratio values is shown in Figure~\ref{fig:KNN_PCA}. The values of $k$ for KNN are separately optimized for the two validation set under each specific value of PCA ratio. 
+
+\begin{figure}[!htb]
+	\centering\includegraphics[width=.6\textwidth]{fig//KNN_PCA}
+	\caption{KNN performance under different PCA ratios.}\label{fig:KNN_PCA}
+\end{figure}
+
+As we can see, for KNN both with and without preprocessing, the accuracy first increases with PCA ratio and then decreases. The highest accuracy of KNN with preprocessing is achieved at PCA ratio equals 0.8, and for KNN without preprocessing the optimal PCA ratio is 0.6. 
 
 
+\subsubsection{Performance under Optimal Parameters}
+In this part, we feed all the training samples into the model, and use all the test data in the testing phase. For KNN with preprocessing, the optimal parameter settings PCA ratio  and $k=$ lead to the highest accuracy of . For KNN without preprocessing, the highest accuracy is 88.12\% achieved at PCA raio = 0.6 and $k=5$. As we can see, since KNN is sensitive to spatial shifting, our preprocessing steps significantly improve the performance of KNN.
 
 
 
