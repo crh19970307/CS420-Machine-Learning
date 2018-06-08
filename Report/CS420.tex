@@ -159,9 +159,12 @@ This second step is relatively easy. We only need to find the boundaries of the 
 \subsubsection{Step 3: Centering}
 Finally, we will center the digital area right in the middle of the image. We want to keep the size of the image ($45\times 45$) unchanged before and after the preprocessing procedure so that we can simply feed the new data set into our previous models. Since the size of the cropped image can be a little smaller than the original image, we add equal padding to the left, right, up and down side of the digit to make its size equal to the original one. The equal padding also guarantees the digit will always be centered in the image, so that the misalignment of digits is not a problem anymore. The OpenCV library provides a function \textit{copyMakeBorder} that implements this operation. Therefore, we only need to calculate the padding length and then safely rely on OpenCV to do the padding job. 
 
-So far, we have finished our preprocessing steps, and the images are ready to be feed into the traditional models. For more detailed explanations of these preprocessing steps, please refer to the comments in our code.
+So far, we have finished our preprocessing steps, and the images are ready to be feed into the traditional models. For more detailed explanations of these preprocessing steps, please refer to the comments in our code in file \texttt{preprocessing.py}.
 
 \subsection{K-Nearest Neighbors}
+
+
+
 
 
 \bibliographystyle{ieee}
