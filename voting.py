@@ -32,7 +32,7 @@ eclf = eclf.fit(X_train_pca, Y_train)
 
 Y_pred = eclf.predict(X_test_pca)
 
-file = open('voting_result.txt', 'a')
+file = open('voting_final_result.txt', 'a')
 file.write('pca_ratio = ' + str(pca_ratio) + ' gamma = ' + str(gamma) + ' accuracy = ')
 file.write(str(metrics.accuracy_score(Y_test, Y_pred)) + '\n')
 file.write(metrics.classification_report(Y_test, Y_pred))

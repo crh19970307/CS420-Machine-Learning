@@ -20,8 +20,8 @@ Y_train = np.fromfile("mnist_train/mnist_train_label",dtype=np.uint8)
 X_test = np.fromfile("mnist_test/new_test_data",dtype=np.uint8).reshape(10000, -1)
 Y_test = np.fromfile("mnist_test/mnist_test_label" ,dtype=np.uint8)
 
-for pca_ratio in np.arange(0.9, 0.96, 0.05):
-	for C in [1, 5, 10]:
+for pca_ratio in np.arange(0.95, 0.96, 0.05):
+	for C in [5, 10]:
 		for gamma in [2e-7, 5e-7, 1e-6]:
 
 			file = open('SVMwith_output2.txt', 'a')

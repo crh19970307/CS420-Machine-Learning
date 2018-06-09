@@ -299,7 +299,7 @@ In this part, we perform Support Vector Machine, or SVM, on the given data set a
 
 In our experiment, we also randomly select 30\% of the training samples as the validation set, and employ hold-out validation to optimize the parameter settings before applying our model to the test set. 
 
-The images in the MNIST data set are $45\times 45$ dimensional. Although this is almost the simplest image data set we can find, we still do not expect the samples to be trivially linear separable. Therefore, throughout our experiment, we use the radial basis function kernel, or simply rbf kernel for SVM. The rbf kernel on two samples $x$ and $x'$ is defined as $K(x,x') = \exp(- \gamma \left\|x-x' \right\|)^2$, where $\gamma = \frac{1}{2\sigma^2}$. The rbf kernel can be interpreted as a similarity measure. Compared with the linear kernel, the rbf kernel is richer in expressiveness, and can handle the case where data points are not linearly separable. The drawback of rbf kernel is that it is very sensible to the specific values of the parameters. To ensure a better performance, we need to rely on cross validation to find the proper parametric settings, which can be quite time consuming. On the contrary, the linear kernel features fewer parameters and less time cost, and is generally well-performed on various problems. The disadvantage is that the linear kernel is basically limited to situations where the data samples are linearly separable. Since the linear kernel can be seen as a special case of the rbf kernel, we can anticipate the rbf kernel to achieve better performance with finely tuned parameters. Since we want SVM to represent the best performance of traditional models in our experiments, the rbf kernel is a natural choice. 
+Each image in the MNIST data set is $45\times 45$ dimensional. Although this is almost the simplest image data set we can find, we still do not expect the samples to be trivially linear separable. Therefore, throughout our experiment, we use the radial basis function kernel, or simply rbf kernel for SVM. The rbf kernel on two samples $x$ and $x'$ is defined as $K(x,x') = \exp(- \gamma \left\|x-x' \right\|)^2$, where $\gamma = \frac{1}{2\sigma^2}$ and $\sigma$ is a free parameter. The rbf kernel can be interpreted as a similarity measure. Compared with the linear kernel, the rbf kernel is richer in expressiveness, and can handle the case where data points are not linearly separable. The drawback of rbf kernel is that it is very sensible to the specific values of the parameters. To ensure a better performance, we need to rely on cross validation to find the proper parametric settings, which can be quite time consuming. On the contrary, the linear kernel features fewer parameters and less time cost, and is generally well-performed on various problems. The disadvantage is that the linear kernel is basically limited to situations where the data samples are linearly separable. Since the linear kernel can be regarded as a special case of the rbf kernel, we can anticipate the rbf kernel to achieve better performance with finely tuned parameters. Since we want SVM to represent the best performance of traditional models in our experiments, the rbf kernel is a natural choice. 
 
 
 \begin{table}[!htb]
@@ -307,6 +307,52 @@ The images in the MNIST data set are $45\times 45$ dimensional. Although this is
 	\small 
 	\caption{SVM performance with / without preprocessing}
 	%\centering
+		\begin{tabular}{ccccc}
+			& precision & recall & f1-score & support \\
+			0     & 0.99  & 0.99  & 0.99  & 992 \\
+			1     & 0.99  & 0.99  & 0.99  & 1193 \\
+			2     & 0.99  & 0.99  & 0.99  & 1031 \\
+			3     & 0.99  & 0.98  & 0.99  & 1030 \\
+			4     & 0.98  & 0.99  & 0.99  & 927 \\
+			5     & 0.99  & 0.98  & 0.99  & 894 \\
+			6     & 0.99  & 0.99  & 0.99  & 1021 \\
+			7     & 0.98  & 0.99  & 0.98  & 1028 \\
+			8     & 0.98  & 0.99  & 0.99  & 922 \\
+			9     & 0.98  & 0.97  & 0.98  & 962 \\
+			avg / total & 0.99  & 0.99  & 0.99  & 10000 \\
+		\end{tabular}%
+	%\hspace{.01in}
+	%\centering
+	%\caption{}
+		\begin{tabular}{ccccc}
+			& precision & recall & f1-score & support \\
+			0     & 0.93  & 0.97  & 0.95  & 992 \\
+			1     & 0.97  & 0.96  & 0.97  & 1193 \\
+			2     & 0.92  & 0.93  & 0.93  & 1031 \\
+			3     & 0.93  & 0.92  & 0.93  & 1030 \\
+			4     & 0.94  & 0.92  & 0.93  & 927 \\
+			5     & 0.93  & 0.91  & 0.92  & 894 \\
+			6     & 0.96  & 0.96  & 0.96  & 1021 \\
+			7     & 0.94  & 0.92  & 0.93  & 1028 \\
+			8     & 0.9   & 0.9   & 0.9   & 922 \\
+			9     & 0.88  & 0.9   & 0.89  & 962 \\
+			avg / total & 0.93  & 0.93  & 0.93  & 10000 \\
+		\end{tabular}%
+	
+	\label{tbl:SVM_with_score}%
+\end{table}%
+
+The sklearn.svm module provides the SVC class that implements the basic functions of SVM. Two crucial parameters of this class include the error term penalty parameter $C$, and the rbf kernel coefficient $\gamma$. We refer to cross validation to optimize the parameter settings. We also enumerate various PCA ratios and keep the ratio of highest accuracy from the validation set. We will not go through the detailed procedure of testing the influence of various parameters in this report, since they are already covered in our third homework. Our codes for SVM are in files \texttt{SVM.py} and \texttt{SVM\_without\_preprocessing.py}. In the following, we simply list the SVM performance on the test set. The accuracy with preprocessing is $98.75\%$, which is achieved at PCA ratio equal to $0.85$, $C=5$ and $\gamma = 5 \times 10^{-7}$. The accuracy of SVM without preprocessing of the data set is $93.22\%$, which is achieved at PCA ratio equal to $0.65$, $C=6$ and $\gamma = 10^{-6}$. The detailed performance of KNN on each category is shown in Table~\ref{tbl:SVM_with_score}.
+
+\subsection{Ensemble Methods}
+In this part, we try ensemble methods on our given problem. Typical ensemble methods include bagging methods, random forests, AdaBoosting, Gradient Tree Boosting, etc, and the scikit-learn library has provided most of these methods. The principle of parallel ensemble methods like bagging methods is to build several independent classifiers and average their predictions. Since the variance is reduced, the combined classifier is expected to perform better than any of the individual base classifier. By contrast, the sequential ensemble methods like boosting combine base classifiers sequentially and tries to reduce the bias of the combined classifier.
+
+In our experiment, we only implement a simple voting classifier, by combining the predictions of our previous KNN and SVM classifiers. We use soft voting by requiring every base classifier to report a probability of assigning the sample to each category, and the final prediction is the category with highest average probability. The parameters for KNN and SVM are cross-validated, and our implementation codes are in file \texttt{voting.py}. The accuracy of the voting classifier on the test set is $98.40\%$, which is achieved at PCA ratio equal to $0.8$, $k=1$, $C=6$ and $\gamma = 10^{-6}$. The detailed performance on each category is shown in Table\ref{tbl:voting}.
+
+\begin{table}[!htb]
+	\centering
+	\small 
+	\caption{Voting performance with preprocessing.}
 	\begin{tabular}{ccccc}
 		& precision & recall & f1-score & support \\
 		0     & 1     & 0.99  & 0.99  & 992 \\
@@ -321,35 +367,15 @@ The images in the MNIST data set are $45\times 45$ dimensional. Although this is
 		9     & 0.98  & 0.96  & 0.97  & 962 \\
 		avg / total & 0.98  & 0.98  & 0.98  & 10000 \\
 	\end{tabular}%
-	%\hspace{.01in}
-	%\centering
-	%\caption{}
-	\begin{tabular}{ccccc}
-		& precision & recall & f1-score & support \\
-		0     & 0.92  & 0.96  & 0.94  & 992 \\
-		1     & 0.87  & 0.99  & 0.93  & 1193 \\
-		2     & 0.94  & 0.88  & 0.91  & 1031 \\
-		3     & 0.86  & 0.86  & 0.86  & 1030 \\
-		4     & 0.87  & 0.84  & 0.85  & 927 \\
-		5     & 0.88  & 0.84  & 0.86  & 894 \\
-		6     & 0.93  & 0.94  & 0.93  & 1021 \\
-		7     & 0.88  & 0.88  & 0.88  & 1028 \\
-		8     & 0.89  & 0.79  & 0.84  & 922 \\
-		9     & 0.77  & 0.81  & 0.79  & 962 \\
-		avg / total & 0.88  & 0.88  & 0.88  & 10000 \\
-	\end{tabular}%
-	\label{tbl:SVM_with_score}%
+	\label{tbl:voting}%
 \end{table}%
 
-The sklearn.svm module provides the SVC class that implements the basic functions of SVM. Two crucial parameters of this class include the error term penalty parameter $C$, and the rbf kernel coefficient $\gamma$. We refer to cross validation to optimize the parameter settings. We also enumerate various PCA ratios and keep the ratio of highest accuracy on the validation set. We will not go through the detailed procedure of testing the influence of various parameters in this report, since they are already covered in our third homework. Our codes for SVM are in files \texttt{SVM.py} and \texttt{SVM\_without\_preprocessing.py}. In the following, we simply list the SVM performance on the test set. The accuracy with preprocessing is achieved at PCA ratio equal to , $C=$ and $\gamma = $. The best performance of SVM without preprocessing of the data set is $93.22\%$, which is achieved at PCA ratio equal to $0.65$, $C=6$ and $\gamma = 10^{-6}$. The detailed performance of KNN on each category is shown in Table~\ref{tbl:SVM_with_score}.
 
-\subsection{Ensemble Methods}
-In this part, we try ensemble methods on our given problem. Typical ensemble methods include bagging methods, random forests, AdaBoosting, Gradient Tree Boosting, etc, and the scikit-learn library has provided most of these methods. The principle of bagging methods is to build several independent classifiers and average their predictions. Since the variance is reduced, the combined classifier is expected to perform better than any of the individual single base classifier. By contrast, the boosting methods combine base classifiers sequentially and tries to reduce the bias of the combined classifier.
+Surprisingly, the combined performance of the two classifiers is actually worse than using the SVM classifier itself. One possible reason is we did not finely tune the parameter values since the grid searching of so many parameters is quite time consuming. Another reason is our voting classifier is composed of only two base classifiers, but in common practice the ensemble classifier may consist of more than a hundred base classifiers to reduce the variance. In addition, the base classifiers of an ensemble model should generally be independent of each other---they should be built on different subsets of the training data, or built upon different combinations of features. Only when the base classifiers are independent can the variance of the ensemble be truly reduced. Another reason is that the performance of our two previous models are already good enough, and it is difficult to reduce the variance simply by averaging the two classifiers. More discussion about the comparison between an ensemble model and each individual model can be found in~\cite{dvzeroski2004combining}. 
 
-In our experiment, however, we only implement a simple voting classifier, by combining the predictions of our previous KNN and SVM classifiers. We use soft voting by requiring every base classifier to report a probability of assigning the sample to each category, and the final prediction is the category with highest average probability. The parameters for KNN and SVM are cross-validated, and our implementation codes are in file \texttt{voting.py}. The accuracy of the voting classifier on the test set is $98.40\%$, which is achieved at PCA ratio equal to $0.8$, $k=1$, $C=6$ and $\gamma = 10^{-6}$. The detailed performance on each category is shown in Table.
+The lesson we can learn from this experiment is that a simple combination of several classifiers does not guarantee better performance. We need to further check whether the base classifiers are independent of each other, and whether the parallel ensemble model can indeed reduce the variance and help avoid the noise in the data set.
 
 
-Surprisingly, the combined performance of the two classifiers is actually worse than using the SVM classifier itself. One possible reason is we did not finely tune the parameter values since the grid searching of so many parameters is quite time consuming. 
 
 
 

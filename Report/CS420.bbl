@@ -1,3 +1,9 @@
-\begin{thebibliography}{}\itemsep=-1pt
+\begin{thebibliography}{1}\itemsep=-1pt
+
+\bibitem{dvzeroski2004combining}
+S.~D{\v{z}}eroski and B.~{\v{Z}}enko.
+\newblock Is combining classifiers with stacking better than selecting the best
+  one?
+\newblock {\em Machine learning}, 54(3):255--273, 2004.
 
 \end{thebibliography}
