@@ -28,8 +28,9 @@ clf.fit(X_train_pca, Y_train)
 X_test_pca = pca.transform(X_test)
 Y_pred = clf.predict(X_test_pca)
 
-file = open('KNNwithout_result.txt', 'a')
+file = open('KNNwithout_final_result.txt', 'a')
 file.write('pca_ratio = ' + str(pca_ratio) + ' n_components = ' + str(neighbors) + ' accuracy = ')
+file.write(str(metrics.accuracy_score(Y_test, Y_pred)) + '\n')
 file.write(metrics.classification_report(Y_test, Y_pred))
 file.close()
 
