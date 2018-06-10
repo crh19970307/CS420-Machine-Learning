@@ -436,6 +436,41 @@ Unlike CNNs, capsules encode the probability of a feature as the length of the o
 
 When receiving vectors from lower level capsules, the higher level capsule first generates the higher level feature by making estimations based on each individual input vector. These vectors are then multiplied by the corresponding weight matrices $W$ that encode spatial and perhaps other relationships between lower level features and higher level feature. Consider the example in Figure~\ref{fig:routing}. Suppose the bold lines denote the low-level features detected from the input image, a vertical line, a horizontal line, and a short diagonal line, which together make up the digit $7$. The high level capsule for digit $4$ receives these input vectors, and multiply them with their corresponding matrices to generate the possible positions and rotations of digit $4$. Clearly, the positions of the three individual estimations do not agree with each other, and hence the probability for a digit $4$ is low. On the contrary, the estimations of digit $7$ are quite consistent across the low-level features, and the probability of digit $7$ is much higher. 
 
+\begin{figure}[!htb]
+	\centering\includegraphics[width=\textwidth]{fig//algorithm}
+	\caption{The detailed routing algorithm.}\label{fig:algorithm}
+\end{figure}
+
+The detailed routing algorithm from \cite{sabour2017dynamic} is shown in Figure~\ref{fig:algorithm}. The $b_{ij}$ in the second line is the temporal coupling coefficient that will get updated within the iterations. The coupling coefficients between capsule $i$ and the capsules in the next layer should sum up to $1$, so in the fourth line a softmax function is performed on $b_{ij}$. In the fifth line, the input into capsule $j$ is the weighted sum of all output vectors from the earlier layer, multiplied by their corresponding matrices. The sixth line normalizes the output vector of capsule $j$ with a novel squashing function, which is defined as:
+$$
+\mathbf{v}_j = \frac{\left|\mathbf{s}_j\right|^2}{1 + \left\| \mathbf{s}_j\right\|^2}\frac{\mathbf{s}_j}{\left\| \mathbf{s}_j\right\|}.
+$$
+Finally, the coupling coefficients are updated with the agreement between the lower level capsule output and the higher level one, where the agreement is defined as the dot product between the two vectors. The loop will be iterated for $r$ times, and the suggested value for $r$ is three.
+
+The loss function is a separate margin loss that is conceptually very similar to the SVM loss function. 
+$$
+L_k = T_k \max(0, m^+ - \left\| \mathbf{v}\right\|)^2 + \lambda (1-T_k) \max (0, \left\| \mathbf{v} \right\| - m^-)^2,
+$$
+where $T_k = 1$ iff a digit of class $k$ is present and $m^+ = 0.9$, $m^-=0.1$ and $\lambda = 0.5$. During training, for each training example, one loss value will be calculated for each of the 10 vectors according to the formula below and then the 10 values will be added together to calculate the final loss. 
+
+\subsection{CapsNet Architecture}
+
+\begin{figure}[!htb]
+	\centering\includegraphics[width=\textwidth]{fig//architecture}
+	\caption{The overall architecture of the Capsule Network.}\label{fig:architecture}
+\end{figure}
+
+The architecture of the Capsule Network is shown in Figure~\ref{fig:architecture}. This network contains only two convolutional layers and one fully connected layer. The first convolutional layer has $256$ $9\times 9$ kernels with a stride of $1$ and ReLU activation. The second layer called PrimaryCapsules is a convolutional layer with $32$ channels of $8$ dimensional capsules. The final layer called DigitCaps contains a $16$ dimensional capsule for each digit, and each of these capsules receives input from all the capsules in the previous layer. The authors claim that this simple network achieves a test error of $0.25\%$ on the MNIST data set. 
+
+\begin{figure}[!htb]
+	\centering\includegraphics[width=.8\textwidth]{fig//decoder}
+	\caption{The CapsNet decoder architecture.}\label{fig:decoder}
+\end{figure}
+
+In addition to the encoder, the authors also add a decoder on top of the DigitCaps layer, as illustrated in Figure~\ref{fig:decoder}. The decoder network consists of three fully connected layers. The decoder takes a $16$ dimensional vector from the correct DigitCap and learns to decode it into an image of a digit. Only the correct vectors in DigitCaps are fed into the decoder during training, and the incorrect ones are discarded. The decoder learns to recreate an 28 by 28 pixels image from the correct vectors in DigitCaps, with the loss function being the sum of squared differences between the reconstructed image and the input image. In this case, the decoder forces the capsules to learn features that are useful for reconstructing the original image. 
+
+
+
 
 
 \bibliographystyle{ieee}
