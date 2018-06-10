@@ -6,4 +6,23 @@ S.~D{\v{z}}eroski and B.~{\v{Z}}enko.
   one?
 \newblock {\em Machine learning}, 54(3):255--273, 2004.
 
+\bibitem{fukushima1983neocognitron}
+K.~Fukushima, S.~Miyake, and T.~Ito.
+\newblock Neocognitron: A neural network model for a mechanism of visual
+  pattern recognition.
+\newblock {\em IEEE transactions on systems, man, and cybernetics},
+  (5):826--834, 1983.
+
+\bibitem{hinton2011transforming}
+G.~E. Hinton, A.~Krizhevsky, and S.~D. Wang.
+\newblock Transforming auto-encoders.
+\newblock In {\em International Conference on Artificial Neural Networks},
+  pages 44--51. Springer, 2011.
+
+\bibitem{sabour2017dynamic}
+S.~Sabour, N.~Frosst, and G.~E. Hinton.
+\newblock Dynamic routing between capsules.
+\newblock In {\em Advances in Neural Information Processing Systems}, pages
+  3859--3869, 2017.
+
 \end{thebibliography}

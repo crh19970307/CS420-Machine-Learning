@@ -375,9 +375,66 @@ Surprisingly, the combined performance of the two classifiers is actually worse 
 
 The lesson we can learn from this experiment is that a simple combination of several classifiers does not guarantee better performance. We need to further check whether the base classifiers are independent of each other, and whether the parallel ensemble model can indeed reduce the variance and help avoid the noise in the data set.
 
+\section{Capsule Networks}
+In this section, we learn the Capsule Networks proposed by Hinton et al.\ and apply it to our given data set. The Capsule Network was first introduced back in 2011\cite{hinton2011transforming}, where Hinton el al.\ pointed out many of the key features of a capsule, but they did not find a way to train the Capsule Networks at that time. Until very recently, in 2017, they claimed to find a way to make the whole architecture work and the Capsule Network achieves state-of-the-art performance on the MNIST data set\cite{sabour2017dynamic}. 
 
+In this project, we studied the intuition, architecture and the routing algorithm of the Capsule Networks, and try to reproduce the results on our given data set. We list our understanding of the related papers as well as the experiment results on our given problem as follows.
 
+\subsection{Intuition behind the Capsule Network}
+Research about the neuroscience tells us that humans learn and analyze visual information hierarchically. When we look at an image of a person, our brain recognizes two eyes, one nose, and one mouth, and putting the lower-level features together, we learn that there is a person in the image. This is the original intuition of Convolutional Neural Networks---they recognize lower-level features from earlier layers in the network, and pass the features to later layers where high-level features are extracted. 
 
+\begin{figure}[!htb]
+	\centering\includegraphics[width=1.0\textwidth]{fig//invariance}
+	\caption{Translational invariance guarantees CNN will recognize the three items as the same, since position does not matter to CNN.\protect\footnotemark }\label{fig:invariance}
+\end{figure}
+
+\footnotetext{Image source: https://www.quora.com/What-is-the-difference-between-equivariance-and-invariance-in-Convolution-neural-networks.}
+
+Convolutional Neural Networks benefit from a key property called translational invariance. This property basically states that the position of the item in the image does not affect how CNN classifies the item, as illustrated in Figure~\ref{fig:invariance}. The internal representation of the network will be roughly the same if a pattern is translated across the image. The way that CNN achieves translational invariance is to use the same kernel all over the image to detect the occurrence of the same feature in multiple locations. This trick also makes the system run faster due to the reduction in parameters through sharing them over all locations in the image.
+
+\begin{figure}[!htb]
+	\centering\includegraphics[width=\textwidth]{fig//equivariance}
+	\caption{Illustration of the equivariance property.\protect\footnotemark }\label{fig:equivariance}
+\end{figure}
+
+\footnotetext{Image source: https://www.quora.com/What-is-the-difference-between-equivariance-and-invariance-in-Convolution-neural-networks.}
+
+Convolutional Neural Networks, however, cannot achieve the equivariance property. The concept of equivariance is similar to invariance, but in addition to having the classification irrelevant to the position, equivariance also asks to predict where the object is. As an example, in Figure~\ref{fig:equivariance}, our brain would correctly identify that these are all the statue of liberty, regardless of the different angles and lighting conditions. CNN is unable to disentangle transformations to the image, such as rotation, changes in color, or lighting conditions, and it will perform terribly on the example of Figure~\ref{fig:equivariance} unless explicitly trained for these angles.
+
+\begin{figure}[!htb]
+	\centering\includegraphics[width=\textwidth]{fig//maxpooling}
+	\caption{CNN classifies both images as human faces because of overly lenient translational invariance.\protect\footnotemark }\label{fig:maxpooling}
+\end{figure}
+
+\footnotetext{Image source: https://hackernoon.com/capsule-networks-are-shaking-up-ai-heres-how-to-use-them-c233a0971952.}
+
+This problem can be credited to Max Pooling. When Kunihiko Fukushima first applied Max Pooling to his Neocognitron network\cite{fukushima1983neocognitron} to allow translational invariance, it was good because the initial idea of Max Pooling makes sense in his digit recognizing problem. However, this is not the case in modern deep learning problems, since we want to detect all parts that make up the whole, and we also need all these elements to be spatially related to each other. Max Pooling is just too lenient with translational invariance, in that it only conveys very vague description about spatial information from layer to layer. For example in Figure~\ref{fig:maxpooling}, CNN would classify both images as human faces despite that the locations of the mouth and the eye have been exchanged, because CNN detects all the necessary lower-level features and Max Pooling collects these lower-level features with minor concern of their spatial translations. 
+
+\begin{figure}[!htb]
+	\centering\includegraphics[width=.8\textwidth]{fig//partwhole}
+	\caption{The pose matrices associate the parts with the whole.\protect\footnotemark }\label{fig:partwhole}
+\end{figure}
+
+\footnotetext{Image source: https://hackernoon.com/uncovering-the-intuition-behind-capsule-networks-and-inverse-graphics-part-i-7412d121798d.}
+
+\begin{figure}[!htb]
+	\centering\includegraphics[width=.8\textwidth]{fig//agreement}
+	\caption{The estimations based on the eye and the mouth do not match.\protect\footnotemark }\label{fig:agreement}
+\end{figure}
+
+\footnotetext{Image source: https://hackernoon.com/uncovering-the-intuition-behind-capsule-networks-and-inverse-graphics-part-i-7412d121798d.}
+
+Hinton argues that in order to correctly do classification and object recognition, it is important to preserve hierarchical pose relationships between object parts. Given the location of a mouth, humans can directly estimate where the face might be regardless of the variation of the viewpoint. There exists a pose matrix that represents the relationship between the parts and the whole, as illustrated in Figure~\ref{fig:partwhole}. When these relationships are built into internal representation of data, it becomes very easy for a model to understand that the thing that it sees is just another view of something that it has seen before. This solves the problem in Figure~\ref{fig:equivariance} about how to interpret the Statue of Liberty from different viewpoints as the same thing. Furthermore, given an image like in Figure~\ref{fig:agreement}, the model will estimates the positions of the face from both the eye and the mouth, and based on these part-whole relationships the model quickly finds out the two estimations do not match with each other. In this case, the model with these built-in relationships will not classify the image as a face, even though it contains all the necessary features that make up a face.  
+
+\subsection{Dynamic Routing with Capsules}
+Unlike CNNs, capsules encode the probability of a feature as the length of the output vector, and the state of the detected feature is encoded as the direction in which that vector points to. Therefore, when the feature moves around in the image, the output vector length stays the same, denoting the probability of this feature does not change, but the orientation of the output vector does change. 
+
+\begin{figure}[!htb]
+	\centering\includegraphics[width=.8\textwidth]{fig//routing}
+	\caption{From lower level capsules to higher level ones.}\label{fig:routing}
+\end{figure}
+
+When receiving vectors from lower level capsules, the higher level capsule first generates the higher level feature by making estimations based on each individual input vector. These vectors are then multiplied by the corresponding weight matrices $W$ that encode spatial and perhaps other relationships between lower level features and higher level feature. Consider the example in Figure~\ref{fig:routing}. Suppose the bold lines denote the low-level features detected from the input image, a vertical line, a horizontal line, and a short diagonal line, which together make up the digit $7$. The high level capsule for digit $4$ receives these input vectors, and multiply them with their corresponding matrices to generate the possible positions and rotations of digit $4$. Clearly, the positions of the three individual estimations do not agree with each other, and hence the probability for a digit $4$ is low. On the contrary, the estimations of digit $7$ are quite consistent across the low-level features, and the probability of digit $7$ is much higher. 
 
 
 

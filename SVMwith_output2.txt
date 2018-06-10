@@ -66,3 +66,7 @@ pca_ratio = 0.95  C = 5  gamma = 1e-06Accuracy = 0.9844
 
 pca_ratio = 0.95  C = 10  gamma = 2e-07Accuracy = 0.9846
 
+pca_ratio = 0.95  C = 10  gamma = 5e-07Accuracy = 0.9862
+
+pca_ratio = 0.95  C = 10  gamma = 1e-06Accuracy = 0.9844
+

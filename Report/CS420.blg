@@ -3,44 +3,46 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: CS420.aux
 The style file: ieee.bst
 Database file #1: egbib.bib
-You've used 1 entry,
+Warning--there's a number but no volume in fukushima1983neocognitron
+You've used 4 entries,
             2120 wiz_defined-function locations,
-            506 strings with 3895 characters,
-and the built_in function-call counts, 354 in all, are:
-= -- 35
-> -- 13
-< -- 0
-+ -- 5
-- -- 4
-* -- 29
-:= -- 64
-add.period$ -- 3
-call.type$ -- 1
-change.case$ -- 5
+            526 strings with 4458 characters,
+and the built_in function-call counts, 1698 in all, are:
+= -- 175
+> -- 67
+< -- 2
++ -- 26
+- -- 22
+* -- 120
+:= -- 262
+add.period$ -- 13
+call.type$ -- 4
+change.case$ -- 23
 chr.to.int$ -- 0
-cite$ -- 1
-duplicate$ -- 11
-empty$ -- 28
-format.name$ -- 4
-if$ -- 69
+cite$ -- 5
+duplicate$ -- 68
+empty$ -- 137
+format.name$ -- 22
+if$ -- 369
 int.to.chr$ -- 0
-int.to.str$ -- 1
-missing$ -- 1
-newline$ -- 8
-num.names$ -- 2
-pop$ -- 3
+int.to.str$ -- 4
+missing$ -- 4
+newline$ -- 23
+num.names$ -- 8
+pop$ -- 26
 preamble$ -- 1
-purify$ -- 4
+purify$ -- 19
 quote$ -- 0
-skip$ -- 8
+skip$ -- 51
 stack$ -- 0
-substring$ -- 30
-swap$ -- 1
-text.length$ -- 0
+substring$ -- 134
+swap$ -- 24
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 4
-warning$ -- 0
-while$ -- 4
-width$ -- 2
-write$ -- 13
+type$ -- 16
+warning$ -- 1
+while$ -- 18
+width$ -- 5
+write$ -- 47
+(There was 1 warning)

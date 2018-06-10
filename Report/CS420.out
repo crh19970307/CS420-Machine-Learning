@@ -10,3 +10,6 @@
 \BOOKMARK [3][-]{subsubsection.1.2.3}{Performance under Optimal Parameters}{subsection.1.2}% 10
 \BOOKMARK [2][-]{subsection.1.3}{Support Vector Machine}{section.1}% 11
 \BOOKMARK [2][-]{subsection.1.4}{Ensemble Methods}{section.1}% 12
+\BOOKMARK [1][-]{section.2}{Capsule Networks}{}% 13
+\BOOKMARK [2][-]{subsection.2.1}{Intuition behind the Capsule Network}{section.2}% 14
+\BOOKMARK [2][-]{subsection.2.2}{Dynamic Routing with Capsules}{section.2}% 15
