@@ -95,19 +95,19 @@ The preprocessing steps are summarized in Figure~\ref{fig:preoverview}. Figure\r
 	\centering
 	\subfigure[Original]{
 	\label{subfig:original}
-	\includegraphics[width=.2\textwidth]{fig//3_original.png}
+	\includegraphics[width=.2\textwidth]{fig/3_original.png}
 }
 	\subfigure[Denoised]{
 	\label{subfig:denoised}
-	\includegraphics[width=.2\textwidth]{fig//3_denoised.png}	
+	\includegraphics[width=.2\textwidth]{fig/3_denoised.png}	
 }
 \subfigure[Cropped]{
 	\label{subfig:cropped}
-	\includegraphics[width=.18\textwidth]{fig//3_cropped.png}	
+	\includegraphics[width=.18\textwidth]{fig/3_cropped.png}	
 }
 \subfigure[Centered]{
 \label{subfig:centered}
-\includegraphics[width=.2\textwidth]{fig//3_centered.png}	
+\includegraphics[width=.2\textwidth]{fig/3_centered.png}	
 }
 \caption{Preprocessing timeline overview.}
 \label{fig:preoverview}
@@ -122,12 +122,12 @@ We utilize the simple Depth First Search (DFS) algorithm to search for the conne
 	\centering
 	\subfigure[Original image]{
 		\label{subfig:binary}
-		\includegraphics[width=.45\textwidth]{fig//DFS1}
+		\includegraphics[width=.45\textwidth]{fig/DFS1}
 	}
 	\hspace{.2in}
 	\subfigure[Neighbors]{
 		\label{subfig:neighbors}
-		\includegraphics[width=.45\textwidth]{fig//DFS2}	
+		\includegraphics[width=.45\textwidth]{fig/DFS2}	
 	}
 	\caption{White block searching.}
 	\label{fig:DFS}
@@ -145,12 +145,12 @@ This second step is relatively easy. We only need to find the boundaries of the 
 	\centering
 	\subfigure[Boundaries]{
 		\label{subfig:bar}
-		\includegraphics[width=.2\textwidth]{fig//3_denoised_bar}	
+		\includegraphics[width=.2\textwidth]{fig/3_denoised_bar}	
 	}
 \hspace{.2in}
 \subfigure[Cropped digit]{
 	\label{subfig:cropped2}
-	\includegraphics[width=.18\textwidth]{fig//3_cropped.png}	
+	\includegraphics[width=.18\textwidth]{fig/3_cropped.png}	
 }
 	\caption{Cropping out the digit.}
 	\label{fig:crop}
@@ -163,42 +163,42 @@ Finally, we will center the digital area right in the middle of the image. We wa
 \begin{figure}[!htb]
 	\centering
 	\subfigure{
-		\includegraphics[width=.2\textwidth]{fig//9_original.png}
+		\includegraphics[width=.2\textwidth]{fig/9_original.png}
 	}
 	\subfigure{
-		\includegraphics[width=.2\textwidth]{fig//9_denoised.png}	
+		\includegraphics[width=.2\textwidth]{fig/9_denoised.png}	
 	}
 	\subfigure{
-		\includegraphics[width=.17\textwidth]{fig//9_cropped.png}	
+		\includegraphics[width=.17\textwidth]{fig/9_cropped.png}	
 	}
 	\subfigure{
-		\includegraphics[width=.2\textwidth]{fig//9_centered.png}	
+		\includegraphics[width=.2\textwidth]{fig/9_centered.png}	
 	}
 
 \subfigure{
-	\includegraphics[width=.2\textwidth]{fig//19_original.png}
+	\includegraphics[width=.2\textwidth]{fig/19_original.png}
 }
 \subfigure{
-	\includegraphics[width=.2\textwidth]{fig//19_denoised.png}	
+	\includegraphics[width=.2\textwidth]{fig/19_denoised.png}	
 }
 \subfigure{
-	\includegraphics[width=.17\textwidth]{fig//19_cropped.png}	
+	\includegraphics[width=.17\textwidth]{fig/19_cropped.png}	
 }
 \subfigure{
-	\includegraphics[width=.2\textwidth]{fig//19_centered.png}	
+	\includegraphics[width=.2\textwidth]{fig/19_centered.png}	
 }
 
 \subfigure{
-	\includegraphics[width=.2\textwidth]{fig//30_original.png}
+	\includegraphics[width=.2\textwidth]{fig/30_original.png}
 }
 \subfigure{
-	\includegraphics[width=.2\textwidth]{fig//30_denoised.png}	
+	\includegraphics[width=.2\textwidth]{fig/30_denoised.png}	
 }
 \subfigure{
-	\includegraphics[width=.183\textwidth]{fig//30_cropped.png}	
+	\includegraphics[width=.183\textwidth]{fig/30_cropped.png}	
 }
 \subfigure{
-	\includegraphics[width=.2\textwidth]{fig//30_centered.png}	
+	\includegraphics[width=.2\textwidth]{fig/30_centered.png}	
 }
 
 	\caption{More examples of preprocessing, including failure cases.}\label{fig:moreexample}
@@ -220,7 +220,7 @@ In this part, we test the influence of PCA ratio on KNN. We enumerate the PCA ra
 
 
 \begin{figure}[!htb]
-	\centering\includegraphics[width=.8\textwidth]{fig//KNN_PCA}
+	\centering\includegraphics[width=.8\textwidth]{fig/KNN_PCA}
 	\caption{KNN performance under different PCA ratios.}\label{fig:KNN_PCA}
 \end{figure}
 
@@ -233,18 +233,18 @@ In this part, we test the influence of the $k$ value for KNN. The value of $k$ r
 	\centering
 	\subfigure[K=1.]{
 		\label{subfig:1NN}
-		\includegraphics[width=.4\textwidth]{fig//1NN.png}}
+		\includegraphics[width=.4\textwidth]{fig/1NN.png}}
 	\hspace{.2in}
 	\subfigure[K=5.]{
 		\label{subfig:5NN}
-		\includegraphics[width=.4\textwidth]{fig//5NN.png}}
+		\includegraphics[width=.4\textwidth]{fig/5NN.png}}
 	\caption{KNN performance under different values of $k$.}\label{fig:KNN}
 \end{figure}
 
 Generally speaking, a larger $k$ can make the model more resistant towards noises and outliers, but may also renders the classification boundary more blurred. Figure\ref{fig:KNN} demonstrates the performance under different values of $k$ on the same data set. As we can see, the boundaries become more smoothed as $k$ increases, and the model is getting more robust against outliers. There are some heuristic algorithms dedicated to finding the optimal value of $k$, but most of the time we only choose the value via cross-validation. 
 
 \begin{figure}[!htb]
-	\centering\includegraphics[width=.8\textwidth]{fig//KNN_K}
+	\centering\includegraphics[width=.8\textwidth]{fig/KNN_K}
 	\caption{KNN performance under different values of $k$.}\label{fig:KNN_K}
 \end{figure}
 
@@ -375,6 +375,183 @@ Surprisingly, the combined performance of the two classifiers is actually worse 
 
 The lesson we can learn from this experiment is that a simple combination of several classifiers does not guarantee better performance. We need to further check whether the base classifiers are independent of each other, and whether the parallel ensemble model can indeed reduce the variance and help avoid the noise in the data set.
 
+\section{CNN Models}
+
+In this section, we apply several Convolutional Neural Network architecture into the given dataset. We have tried Simple CNN with two convolution layers, VGG Net~\cite{simonyan2014very} and Resnet~\cite{he2016deep}.
+
+\subsection{SimpleCNN}
+
+We first test a simple CNN with 2 convolution layers as our baseline. The architecture is shown below~\ref{fig:simplecnn}. Since the architecture of the network is very basic, we use it as the baseline method. The loss and accuracy curve is shown below~\ref{fig:simplecnn-curve}. We can see that the highest accuracy is 97.16\%. It is not too high since the architecture is too simple and the number of parameters is so small. We will try other network architectures in the following section.
+
+\begin{figure}[!htb]
+	\centering\includegraphics[width=1.0\textwidth]{fig/simplecnn.png}
+	\caption{Network architecture of simple CNN }\label{fig:simplecnn}
+\end{figure}
+
+
+\begin{figure}[!htb]
+	\centering
+\subfigure[loss]{
+	\label{subfig:loss-simplecnn}
+	\includegraphics[width=.47\textwidth]{fig/loss-simplecnn.png}	
+}
+\subfigure[accuracy]{
+\label{subfig:acc-simplecnn}
+\includegraphics[width=.47\textwidth]{fig/acc-simplecnn.png}	
+}
+\caption{Loss and accuracy curve of simple CNN}
+\label{fig:simplecnn-curve}
+\end{figure}
+
+
+\subsection{VGG Net}
+
+VGG network~\cite{simonyan2014very} secured the first and the second places in the localisation 
+and classification tracks respectively in Imagenet 2014. The main contribution of VGG is it shows that a significant improvement on the prior-art configurations can be achieved by pushing the depth to 16-19 weight layers. It confirms the deeper the network is, the better performance it will gain. More parameters will imcrease the representative ability of network.  The VGG16 architecture is shown below~\ref{fig:vgg16}. The VGG net configuration is shown below~\ref{fig:vgg}.
+
+\begin{figure}[!htb]
+	\centering\includegraphics[width=1.0\textwidth]{fig/vgg16.png}
+	\caption{Network Architecture of  VGG16}\label{fig:vgg16}
+\end{figure}
+
+\begin{figure}[!htb]
+	\centering\includegraphics[width=1.0\textwidth]{fig/vgg.jpg}
+	\caption{Network Configuration of  VGG\protect\footnotemark}\label{fig:vgg}
+\end{figure}
+\footnotetext{The image source is from paper Very deep convolutional networks for large-scale image recognition}
+We try different network configuration, VGG16 and VGG11.  The loss and accuracy curve is shown below~\ref{fig:vgg-curve}. The highest accuracy of VGG16 and VGG11 is 99.71\% and 99.50\%. The result is excellent! We find that deeper network tends to have better performance. 
+
+\begin{figure}[!htb]
+	\centering
+\subfigure[loss]{
+	\label{subfig:loss-vgg}
+	\includegraphics[width=.47\textwidth]{fig/loss-vgg.png}	
+}
+\subfigure[accuracy]{
+\label{subfig:acc-vgg}
+\includegraphics[width=.47\textwidth]{fig/acc-vgg.png}	
+}
+\caption{Loss and accuracy curve of  VGG}
+\label{fig:vgg-curve}
+\end{figure}
+
+\subsection{Resnet}
+
+Resnet\cite{he2016deep} is one of the most popular networks recently. In general, deeper neural networks are more difficult to train. Resnet is a residual learning framework to ease the training
+of networks that are substantially deeper than those used
+previously. Resnet explicitly reformulate the layers as learning
+residual functions with reference to the layer inputs, instead
+of learning unreferenced functions. The network won the 1st place on the ILSVRC 2015 classification task. Many state-of-the art frameworks in computer vision tasks such as object detection, instance segmentation and pose estimation uses Resnet as backbone network to extract feature. Deep residual nets are foundations of ILSVRC
+\& COCO 2015 competitions, where the group of resnet also won the 1st
+places on the tasks of ImageNet detection, ImageNet localization,
+COCO detection, and COCO segmentation.
+
+There are two kinds of block of Resnet, basic block and bottleneck. The figure~\ref{fig:basic-block} shows the structure of blocks. Usually which structure to use depends on the depth of network. Resnet with 18 layers and 34 layers use basic block. Resnet with 50 layers, 101 layers and 152 layers use bottlenect. The configuration of some architecture is shown in figure~\ref{fig:resnet}. The structure of resnet 34 is shown below~\ref{fig:res34}.
+
+\begin{figure}[!htb]
+	\centering
+\subfigure[Basic Block]{
+	\label{subfig:residual-block}
+	\includegraphics[width=.47\textwidth]{fig/residual-block.png}	
+}
+\subfigure[Bottleneck]{
+\label{subfig:bottleneck}
+\includegraphics[width=.47\textwidth]{fig/bottleneck.png}	
+}
+\caption{Structure of Basic Block and Bottleneck\protect\footnotemark}
+\label{fig:basic-block}
+\end{figure}
+\footnotetext{The image source is from paper Deep residual learning for image recognition}
+
+\begin{figure}[!htb]
+	\centering\includegraphics[width=1.0\textwidth]{fig/resnet.png}
+	\caption{Network Configuration of  Resnet\protect\footnotemark}\label{fig:resnet}
+\end{figure}
+
+\footnotetext{The image source is from paper Deep residual learning for image recognition}
+
+\begin{figure}[!htb]
+	\centering\includegraphics[width=0.3\textwidth]{fig/res34.png}
+	\caption{Network Structure of  Resnet34\protect\footnotemark}\label{fig:res34}
+\end{figure}
+\footnotetext{The image source is from paper Deep residual learning for image recognition}
+
+We try Resnet 18, 34, 50 and 101. The loss and accuracy curve is shown below~\ref{fig:resnet-curve}. The highest accuracy of Res101 is 99.73\%. The highest accuracy of Res50, Res34 and Res18 is 99.65\%, 99.67\% and 99.59\%. We find that Resnet 101 gets the highest accuracy. And Res101 is very deep and takes lot of time to train. So it makes sense that Res101 performs well. 
+
+\begin{figure}[!htb]
+	\centering
+\subfigure[loss]{
+	\label{subfig:loss-resnet}
+	\includegraphics[width=.47\textwidth]{fig/loss-resnet.png}	
+}
+\subfigure[accuracy]{
+\label{subfig:acc-resnet}
+\includegraphics[width=.47\textwidth]{fig/acc-resnet.png}	
+}
+\caption{Loss and accuracy curve of  Resnet}
+\label{fig:resnet-curve}
+\end{figure}
+
+\subsection{Comparisian}
+
+We put the loss and accuracy curve of all networks together. Then we compare the performance of them. The result is shown below~\ref{fig:acc-total}~\ref{fig:loss-total}.
+
+\begin{figure}[!htb]
+	\centering\includegraphics[width=\textwidth]{fig/acc-total.png}
+	\caption{Accuracy of all Neural Networks}\label{fig:acc-total}
+\end{figure}
+
+\begin{figure}[!htb]
+	\centering\includegraphics[width=\textwidth]{fig/loss-total.png}
+	\caption{Loss of all Neural Networks}\label{fig:loss-total}
+\end{figure}
+
+ We find that Resnet 101 gets the highest accuracy even without prepcocessing. We also try to combine the Resnet 101 model with image preprocessing and find how well it performs. The result is shown below~\ref{tbl:resnet_with_score}. We can find that Resnet 101 with image processing get even better result! It means the processing improves the performance not only in traditional mwethod but also in deep learning method. So we should not make deep learning method alone.
+ 
+ 
+\begin{table}[!htb]
+	\centering
+	\small 
+	\caption{Res101 performance with / without preprocessing}
+	%\centering
+		\begin{tabular}{ccccc}
+			& precision & recall & f1-score & support \\
+			0     & 0.998  & 0.994  & 0.996  & 992 \\
+			1     & 0.996  & 0.991  & 0.993  & 1193 \\
+			2     & 0.998  & 0.998 & 0.998  & 1031 \\
+			3     & 0.997  & 0.981  & 0.990  & 1030 \\
+			4     & 0.993  & 0.998  & 0.997  & 927 \\
+			5     & 0.998  & 0.982  & 0.995  & 894 \\
+			6     & 0.996  & 0.992  & 0.994  & 1021 \\
+			7     & 0.995  & 0.992  & 0.994  & 1028 \\
+			8     & 0.994  & 0.994  & 0.994  & 922 \\
+			9     & 0.999  & 0.999  & 0.999  & 962 \\
+			avg / total & 0.998  & 0.997  & 0.998  & 10000 \\
+		\end{tabular}%
+	%\hspace{.01in}
+	%\centering
+	%\caption{}
+		\begin{tabular}{ccccc}
+			& precision & recall & f1-score & support \\
+			0     & 0.995  & 0.994  & 0.994  & 992 \\
+			1     & 0.994  & 0.991  & 0.993  & 1193 \\
+			2     & 0.998  & 0.998 & 0.998  & 1031 \\
+			3     & 0.991  & 0.981  & 0.990  & 1030 \\
+			4     & 0.989  & 0.998  & 0.997  & 927 \\
+			5     & 0.998  & 0.982  & 0.995  & 894 \\
+			6     & 0.996  & 0.992  & 0.994  & 1021 \\
+			7     & 0.995  & 0.992  & 0.996  & 1028 \\
+			8     & 0.989  & 0.994  & 0.992  & 922 \\
+			9     & 0.999  & 0.999  & 0.999  & 962 \\
+			avg / total & 0.997  & 0.996  & 0.997  & 10000 \\
+		\end{tabular}%
+	
+	\label{tbl:resnet_with_score}%
+\end{table}%
+
+
+
+
 \section{Capsule Networks}
 In this section, we learn the Capsule Networks proposed by Hinton et al.\ and apply it to our given data set. The Capsule Network was first introduced back in 2011\cite{hinton2011transforming}, where Hinton el al.\ pointed out many of the key features of a capsule, but they did not find a way to train the Capsule Networks at that time. Until very recently, in 2017, they claimed to find a way to make the whole architecture work and the Capsule Network achieves state-of-the-art performance on the MNIST data set\cite{sabour2017dynamic}. 
 
@@ -384,7 +561,7 @@ In this project, we studied the intuition, architecture and the routing algorith
 Research about the neuroscience tells us that humans learn and analyze visual information hierarchically. When we look at an image of a person, our brain recognizes two eyes, one nose, and one mouth, and putting the lower-level features together, we learn that there is a person in the image. This is the original intuition of Convolutional Neural Networks---they recognize lower-level features from earlier layers in the network, and pass the features to later layers where high-level features are extracted. 
 
 \begin{figure}[!htb]
-	\centering\includegraphics[width=1.0\textwidth]{fig//invariance}
+	\centering\includegraphics[width=1.0\textwidth]{fig/invariance}
 	\caption{Translational invariance guarantees CNN will recognize the three items as the same, since position does not matter to CNN.\protect\footnotemark }\label{fig:invariance}
 \end{figure}
 
@@ -393,7 +570,7 @@ Research about the neuroscience tells us that humans learn and analyze visual in
 Convolutional Neural Networks benefit from a key property called translational invariance. This property basically states that the position of the item in the image does not affect how CNN classifies the item, as illustrated in Figure~\ref{fig:invariance}. The internal representation of the network will be roughly the same if a pattern is translated across the image. The way that CNN achieves translational invariance is to use the same kernel all over the image to detect the occurrence of the same feature in multiple locations. This trick also makes the system run faster due to the reduction in parameters through sharing them over all locations in the image.
 
 \begin{figure}[!htb]
-	\centering\includegraphics[width=\textwidth]{fig//equivariance}
+	\centering\includegraphics[width=\textwidth]{fig/equivariance}
 	\caption{Illustration of the equivariance property.\protect\footnotemark }\label{fig:equivariance}
 \end{figure}
 
@@ -402,7 +579,7 @@ Convolutional Neural Networks benefit from a key property called translational i
 Convolutional Neural Networks, however, cannot achieve the equivariance property. The concept of equivariance is similar to invariance, but in addition to having the classification irrelevant to the position, equivariance also asks to predict where the object is. As an example, in Figure~\ref{fig:equivariance}, our brain would correctly identify that these are all the statue of liberty, regardless of the different angles and lighting conditions. CNN is unable to disentangle transformations to the image, such as rotation, changes in color, or lighting conditions, and it will perform terribly on the example of Figure~\ref{fig:equivariance} unless explicitly trained for these angles.
 
 \begin{figure}[!htb]
-	\centering\includegraphics[width=\textwidth]{fig//maxpooling}
+	\centering\includegraphics[width=\textwidth]{fig/maxpooling}
 	\caption{CNN classifies both images as human faces because of overly lenient translational invariance.\protect\footnotemark }\label{fig:maxpooling}
 \end{figure}
 
@@ -411,14 +588,14 @@ Convolutional Neural Networks, however, cannot achieve the equivariance property
 This problem can be credited to Max Pooling. When Kunihiko Fukushima first applied Max Pooling to his Neocognitron network\cite{fukushima1983neocognitron} to allow translational invariance, it was good because the initial idea of Max Pooling makes sense in his digit recognizing problem. However, this is not the case in modern deep learning problems, since we want to detect all parts that make up the whole, and we also need all these elements to be spatially related to each other. Max Pooling is just too lenient with translational invariance, in that it only conveys very vague description about spatial information from layer to layer. For example in Figure~\ref{fig:maxpooling}, CNN would classify both images as human faces despite that the locations of the mouth and the eye have been exchanged, because CNN detects all the necessary lower-level features and Max Pooling collects these lower-level features with minor concern of their spatial translations. 
 
 \begin{figure}[!htb]
-	\centering\includegraphics[width=.8\textwidth]{fig//partwhole}
+	\centering\includegraphics[width=.8\textwidth]{fig/partwhole}
 	\caption{The pose matrices associate the parts with the whole.\protect\footnotemark }\label{fig:partwhole}
 \end{figure}
 
 \footnotetext{Image source: https://hackernoon.com/uncovering-the-intuition-behind-capsule-networks-and-inverse-graphics-part-i-7412d121798d.}
 
 \begin{figure}[!htb]
-	\centering\includegraphics[width=.8\textwidth]{fig//agreement}
+	\centering\includegraphics[width=.8\textwidth]{fig/agreement}
 	\caption{The estimations based on the eye and the mouth do not match.\protect\footnotemark }\label{fig:agreement}
 \end{figure}
 
@@ -430,14 +607,14 @@ Hinton argues that in order to correctly do classification and object recognitio
 Unlike CNNs, capsules encode the probability of a feature as the length of the output vector, and the state of the detected feature is encoded as the direction in which that vector points to. Therefore, when the feature moves around in the image, the output vector length stays the same, denoting the probability of this feature does not change, but the orientation of the output vector does change. 
 
 \begin{figure}[!htb]
-	\centering\includegraphics[width=.8\textwidth]{fig//routing}
+	\centering\includegraphics[width=.8\textwidth]{fig/routing}
 	\caption{From lower level capsules to higher level ones.}\label{fig:routing}
 \end{figure}
 
 When receiving vectors from lower level capsules, the higher level capsule first generates the higher level feature by making estimations based on each individual input vector. These vectors are then multiplied by the corresponding weight matrices $W$ that encode spatial and perhaps other relationships between lower level features and higher level feature. Consider the example in Figure~\ref{fig:routing}. Suppose the bold lines denote the low-level features detected from the input image, a vertical line, a horizontal line, and a short diagonal line, which together make up the digit $7$. The high level capsule for digit $4$ receives these input vectors, and multiply them with their corresponding matrices to generate the possible positions and rotations of digit $4$. Clearly, the positions of the three individual estimations do not agree with each other, and hence the probability for a digit $4$ is low. On the contrary, the estimations of digit $7$ are quite consistent across the low-level features, and the probability of digit $7$ is much higher. 
 
 \begin{figure}[!htb]
-	\centering\includegraphics[width=\textwidth]{fig//algorithm}
+	\centering\includegraphics[width=\textwidth]{fig/algorithm}
 	\caption{The detailed routing algorithm.}\label{fig:algorithm}
 \end{figure}
 
@@ -456,19 +633,22 @@ where $T_k = 1$ iff a digit of class $k$ is present and $m^+ = 0.9$, $m^-=0.1$ a
 \subsection{CapsNet Architecture}
 
 \begin{figure}[!htb]
-	\centering\includegraphics[width=\textwidth]{fig//architecture}
+	\centering\includegraphics[width=\textwidth]{fig/architecture}
 	\caption{The overall architecture of the Capsule Network.}\label{fig:architecture}
 \end{figure}
 
 The architecture of the Capsule Network is shown in Figure~\ref{fig:architecture}. This network contains only two convolutional layers and one fully connected layer. The first convolutional layer has $256$ $9\times 9$ kernels with a stride of $1$ and ReLU activation. The second layer called PrimaryCapsules is a convolutional layer with $32$ channels of $8$ dimensional capsules. The final layer called DigitCaps contains a $16$ dimensional capsule for each digit, and each of these capsules receives input from all the capsules in the previous layer. The authors claim that this simple network achieves a test error of $0.25\%$ on the MNIST data set. 
 
 \begin{figure}[!htb]
-	\centering\includegraphics[width=.8\textwidth]{fig//decoder}
+	\centering\includegraphics[width=.8\textwidth]{fig/decoder}
 	\caption{The CapsNet decoder architecture.}\label{fig:decoder}
 \end{figure}
 
 In addition to the encoder, the authors also add a decoder on top of the DigitCaps layer, as illustrated in Figure~\ref{fig:decoder}. The decoder network consists of three fully connected layers. The decoder takes a $16$ dimensional vector from the correct DigitCap and learns to decode it into an image of a digit. Only the correct vectors in DigitCaps are fed into the decoder during training, and the incorrect ones are discarded. The decoder learns to recreate an 28 by 28 pixels image from the correct vectors in DigitCaps, with the loss function being the sum of squared differences between the reconstructed image and the input image. In this case, the decoder forces the capsules to learn features that are useful for reconstructing the original image. 
 
+\subsection{Experiments}
+
+We use the same hyperparameters with the origin paper. We construct a capsule network and train on the given dataset. We find that capsule network takes much time to train. We train on a single TITAN X GPU card for one day and get the highest accuracy of 97.9\% on 213rd epoch. The accuracy is higher than 97.3\% achieved by resnet101. Since the capsule network can obtain  information beetween different parts in an image and achieves equivariance property, the result makes sense. We also test the capsule with image processing. We find that capsule network gets 98.1\% accuracy, which is almost the same as Resnet with processing. That may because the processing is helpful to models without equivariance property such as CNN. However, for capsule that doesn't help much. In general, capsule network performs better than traditional method and CNN models.
 
 
 

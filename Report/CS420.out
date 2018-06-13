@@ -1,16 +1,22 @@
-\BOOKMARK [1][-]{section.1}{Traditional Models}{}% 1
-\BOOKMARK [2][-]{subsection.1.1}{Pixel-Level Image Preprocessing}{section.1}% 2
-\BOOKMARK [3][-]{subsubsection.1.1.1}{Timeline Overview}{subsection.1.1}% 3
-\BOOKMARK [3][-]{subsubsection.1.1.2}{Step 1: Denoising}{subsection.1.1}% 4
-\BOOKMARK [3][-]{subsubsection.1.1.3}{Step 2: Cropping}{subsection.1.1}% 5
-\BOOKMARK [3][-]{subsubsection.1.1.4}{Step 3: Centering}{subsection.1.1}% 6
-\BOOKMARK [2][-]{subsection.1.2}{K-Nearest Neighbors}{section.1}% 7
-\BOOKMARK [3][-]{subsubsection.1.2.1}{Influence of PCA Ratio}{subsection.1.2}% 8
-\BOOKMARK [3][-]{subsubsection.1.2.2}{Influence of K}{subsection.1.2}% 9
-\BOOKMARK [3][-]{subsubsection.1.2.3}{Performance under Optimal Parameters}{subsection.1.2}% 10
-\BOOKMARK [2][-]{subsection.1.3}{Support Vector Machine}{section.1}% 11
-\BOOKMARK [2][-]{subsection.1.4}{Ensemble Methods}{section.1}% 12
-\BOOKMARK [1][-]{section.2}{Capsule Networks}{}% 13
-\BOOKMARK [2][-]{subsection.2.1}{Intuition behind the Capsule Network}{section.2}% 14
-\BOOKMARK [2][-]{subsection.2.2}{Dynamic Routing with Capsules}{section.2}% 15
-\BOOKMARK [2][-]{subsection.2.3}{CapsNet Architecture}{section.2}% 16
+\BOOKMARK [1][-]{section.1}{Traditional\040Models}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Pixel-Level\040Image\040Preprocessing}{section.1}% 2
+\BOOKMARK [3][-]{subsubsection.1.1.1}{Timeline\040Overview}{subsection.1.1}% 3
+\BOOKMARK [3][-]{subsubsection.1.1.2}{Step\0401:\040Denoising}{subsection.1.1}% 4
+\BOOKMARK [3][-]{subsubsection.1.1.3}{Step\0402:\040Cropping}{subsection.1.1}% 5
+\BOOKMARK [3][-]{subsubsection.1.1.4}{Step\0403:\040Centering}{subsection.1.1}% 6
+\BOOKMARK [2][-]{subsection.1.2}{K-Nearest\040Neighbors}{section.1}% 7
+\BOOKMARK [3][-]{subsubsection.1.2.1}{Influence\040of\040PCA\040Ratio}{subsection.1.2}% 8
+\BOOKMARK [3][-]{subsubsection.1.2.2}{Influence\040of\040K}{subsection.1.2}% 9
+\BOOKMARK [3][-]{subsubsection.1.2.3}{Performance\040under\040Optimal\040Parameters}{subsection.1.2}% 10
+\BOOKMARK [2][-]{subsection.1.3}{Support\040Vector\040Machine}{section.1}% 11
+\BOOKMARK [2][-]{subsection.1.4}{Ensemble\040Methods}{section.1}% 12
+\BOOKMARK [1][-]{section.2}{CNN\040Models}{}% 13
+\BOOKMARK [2][-]{subsection.2.1}{SimpleCNN}{section.2}% 14
+\BOOKMARK [2][-]{subsection.2.2}{VGG\040Net}{section.2}% 15
+\BOOKMARK [2][-]{subsection.2.3}{Resnet}{section.2}% 16
+\BOOKMARK [2][-]{subsection.2.4}{Comparisian}{section.2}% 17
+\BOOKMARK [1][-]{section.3}{Capsule\040Networks}{}% 18
+\BOOKMARK [2][-]{subsection.3.1}{Intuition\040behind\040the\040Capsule\040Network}{section.3}% 19
+\BOOKMARK [2][-]{subsection.3.2}{Dynamic\040Routing\040with\040Capsules}{section.3}% 20
+\BOOKMARK [2][-]{subsection.3.3}{CapsNet\040Architecture}{section.3}% 21
+\BOOKMARK [2][-]{subsection.3.4}{Experiments}{section.3}% 22

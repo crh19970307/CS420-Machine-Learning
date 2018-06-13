@@ -13,6 +13,12 @@ K.~Fukushima, S.~Miyake, and T.~Ito.
 \newblock {\em IEEE transactions on systems, man, and cybernetics},
   (5):826--834, 1983.
 
+\bibitem{he2016deep}
+K.~He, X.~Zhang, S.~Ren, and J.~Sun.
+\newblock Deep residual learning for image recognition.
+\newblock In {\em Proceedings of the IEEE conference on computer vision and
+  pattern recognition}, pages 770--778, 2016.
+
 \bibitem{hinton2011transforming}
 G.~E. Hinton, A.~Krizhevsky, and S.~D. Wang.
 \newblock Transforming auto-encoders.
@@ -24,5 +30,10 @@ S.~Sabour, N.~Frosst, and G.~E. Hinton.
 \newblock Dynamic routing between capsules.
 \newblock In {\em Advances in Neural Information Processing Systems}, pages
   3859--3869, 2017.
+
+\bibitem{simonyan2014very}
+K.~Simonyan and A.~Zisserman.
+\newblock Very deep convolutional networks for large-scale image recognition.
+\newblock {\em arXiv preprint arXiv:1409.1556}, 2014.
 
 \end{thebibliography}
