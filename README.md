@@ -9,7 +9,6 @@
 * [CNN](#cnn)
 * [Capsule](#capsule)
 * [Result](#result)
-* [Structure](#structure)
 * [Team Member](#team-member)
 
 ## Summary
@@ -89,13 +88,11 @@ Usage:
 |   KNN    |    98.40     | KNN without preprocess |    88.12     |
 |   SVM    |    98.75     | SVM without preprocess |    93.22     |
 | Ensemble |    98.40     |                        |              |
-|  VGGNet  |              |                        |              |
-|  ResNet  |              |                        |              |
-| CapsNet  |              |                        |              |
+|  VGG16 |       99.79  |  VGG16 without preprocess |    99.71     |                 
+| Res101     |    99.83   |  Res101 without preprocess |    99.73    |    
+|  CapsNet      | 99.80  | CapsNet without preprocess |    99.78   |   
 
 
-
-## Structure
 
 ## Team Member
 
