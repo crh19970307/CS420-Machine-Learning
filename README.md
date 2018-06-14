@@ -28,7 +28,7 @@ We are faced with a classification problem on a modified MNIST handwritten digit
 We preprocess the images to invert the artificial disturbance as follows:
 
 ```python
-cd traditional-learning-method
+cd traditional-learning-method/
 python3 preprocessing.py
 ```
 
@@ -38,7 +38,7 @@ python3 preprocessing.py
 
 * Enter the [traditional-learning-method/](./traditional-learning-method) folder:
 
-  `cd traditional-learning-method`
+  `cd traditional-learning-method/`
 
 * KNN:
 
@@ -59,7 +59,7 @@ We try three kinds of network architectures, SimpleCNN, VGG and Resnet.
 Usage:
 
 ```
-	cd deep-learning-method
+	cd deep-learning-method/
 	python tools/train.py [--gpu GPU-ID] [--dataset DATASET] [--net NET] 
 	[--resume path/to/resume/from] [--logdir path/to/log/dir]
 
@@ -77,7 +77,7 @@ Usage:
 Usage:
 
 ```
-	cd capsule
+	cd capsule/
 	CUDA_VISIBLE_DEVICES=0 python3 capsule_network.py
 ```
 
