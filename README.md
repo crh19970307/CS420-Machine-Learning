@@ -4,7 +4,7 @@
 
 * [Summary](#summary)
 * [Prerequisite](#prerequisite)
-* [Preprocessing](#Preprocessing)
+* [Preprocessing](#preprocessing)
 * [Traditional Methods](#traditional-methods)
 * [CNN](#cnn)
 * [Capsule](#capsule)
