@@ -9,7 +9,6 @@
 * [CNN](#cnn)
 * [Capsule](#capsule)
 * [Result](#result)
-* [Structure](#structure)
 * [Team Member](#team-member)
 
 ## Summary
@@ -94,8 +93,6 @@ Usage:
 |  CapsNet      | 99.80  | CapsNet without preprocess |    99.78   |   
 
 
-
-## Structure
 
 ## Team Member
 
