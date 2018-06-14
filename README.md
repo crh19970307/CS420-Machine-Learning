@@ -81,16 +81,16 @@ Usage:
 	CUDA_VISIBLE_DEVICES=0 python3 capsule_network.py
 ```
 
-## Result
+## Results
 
 |  Model   | Accuracy / % |         Model          | Accuracy / % |
 | :------: | :----------: | :--------------------: | :----------: |
 |   KNN    |    98.40     | KNN without preprocess |    88.12     |
 |   SVM    |    98.75     | SVM without preprocess |    93.22     |
 | Ensemble |    98.40     |                        |              |
-|  VGG16 |       99.79  |  VGG16 without preprocess |    99.71     |                 
-| Res101     |    99.83   |  Res101 without preprocess |    99.73    |    
-|  CapsNet      | 99.80  | CapsNet without preprocess |    99.78   |   
+|  VGG16 |       99.79  |  VGG16 without preprocess |    99.71     |
+| Res101     |  **99.83**  |  Res101 without preprocess |    99.73    |
+|  CapsNet      | 99.80  | CapsNet without preprocess |    99.78   |
 
 
 
