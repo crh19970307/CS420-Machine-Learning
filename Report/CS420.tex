@@ -80,6 +80,9 @@
 
 \maketitle
 
+\section{Project Overview}
+
+
 \section{Traditional Models}
 In this section, we first preprocess the images on the pixel level to remove the disturbances. We then perform traditional classification models, such as KNN and SVM, on the processed images. We further compare the performance of the traditional models with and without the preprocessing procedure. Finally, we employ ensemble methods and try to obtain better predictive performance.
 
@@ -406,8 +409,8 @@ We first test a simple CNN with 2 convolution layers as our baseline. The archit
 
 \subsection{VGG Net}
 
-VGG network~\cite{simonyan2014very} secured the first and the second places in the localisation 
-and classification tracks respectively in Imagenet 2014. The main contribution of VGG is it shows that a significant improvement on the prior-art configurations can be achieved by pushing the depth to 16-19 weight layers. It confirms the deeper the network is, the better performance it will gain. More parameters will imcrease the representative ability of network.  The VGG16 architecture is shown below~\ref{fig:vgg16}. The VGG net configuration is shown below~\ref{fig:vgg}.
+VGG network~\cite{simonyan2014very} secured the first and the second places in the localization 
+and classification tracks respectively in Imagenet 2014. The main contribution of VGG is it shows that a significant improvement on the prior-art configurations can be achieved by pushing the depth to 16-19 weight layers. It confirms the deeper the network is, the better performance it will gain. More parameters will increase the representative ability of network.  The VGG16 architecture is shown below~\ref{fig:vgg16}. The VGG net configuration is shown below~\ref{fig:vgg}.
 
 \begin{figure}[!htb]
 	\centering\includegraphics[width=1.0\textwidth]{fig/vgg16.png}
@@ -446,7 +449,7 @@ of learning unreferenced functions. The network won the 1st place on the ILSVRC 
 places on the tasks of ImageNet detection, ImageNet localization,
 COCO detection, and COCO segmentation.
 
-There are two kinds of block of Resnet, basic block and bottleneck. The figure~\ref{fig:basic-block} shows the structure of blocks. Usually which structure to use depends on the depth of network. Resnet with 18 layers and 34 layers use basic block. Resnet with 50 layers, 101 layers and 152 layers use bottlenect. The configuration of some architecture is shown in figure~\ref{fig:resnet}. The structure of resnet 34 is shown below~\ref{fig:res34}.
+There are two kinds of block of Resnet, basic block and bottleneck. The figure~\ref{fig:basic-block} shows the structure of blocks. Usually which structure to use depends on the depth of network. Resnet with 18 layers and 34 layers use basic block. Resnet with 50 layers, 101 layers and 152 layers use bottleneck. The configuration of some architecture is shown in figure~\ref{fig:resnet}. The structure of resnet 34 is shown below~\ref{fig:res34}.
 
 \begin{figure}[!htb]
 	\centering
@@ -492,7 +495,7 @@ We try Resnet 18, 34, 50 and 101. The loss and accuracy curve is shown below~\re
 \label{fig:resnet-curve}
 \end{figure}
 
-\subsection{Comparisian}
+\subsection{Comparison}
 
 We put the loss and accuracy curve of all networks together. Then we compare the performance of them. The result is shown below~\ref{fig:acc-total}~\ref{fig:loss-total}.
 
@@ -506,7 +509,7 @@ We put the loss and accuracy curve of all networks together. Then we compare the
 	\caption{Loss of all Neural Networks}\label{fig:loss-total}
 \end{figure}
 
- We find that Resnet 101 gets the highest accuracy even without prepcocessing. We also try to combine the Resnet 101 model with image preprocessing and find how well it performs. The result is shown below~\ref{tbl:resnet_with_score}. We can find that Resnet 101 with image processing get even better result! It means the processing improves the performance not only in traditional mwethod but also in deep learning method. So we should not make deep learning method alone.
+ We find that Resnet 101 gets the highest accuracy even without preprocessing. We also try to combine the Resnet 101 model with image preprocessing and find how well it performs. The result is shown below~\ref{tbl:resnet_with_score}. We can find that Resnet 101 with image processing get even better result! It means the processing improves the performance not only in traditional method but also in deep learning method. So we should not make deep learning method alone.
  
  
 \begin{table}[!htb]
@@ -648,7 +651,7 @@ In addition to the encoder, the authors also add a decoder on top of the DigitCa
 
 \subsection{Experiments}
 
-We use the same hyperparameters with the origin paper. We construct a capsule network and train on the given dataset. We find that capsule network takes much time to train. We train on a single TITAN X GPU card for one day and get the highest accuracy of 97.9\% on 213rd epoch. The accuracy is higher than 97.3\% achieved by resnet101. Since the capsule network can obtain  information beetween different parts in an image and achieves equivariance property, the result makes sense. We also test the capsule with image processing. We find that capsule network gets 98.1\% accuracy, which is almost the same as Resnet with processing. That may because the processing is helpful to models without equivariance property such as CNN. However, for capsule that doesn't help much. In general, capsule network performs better than traditional method and CNN models.
+We use the same hyper parameters with the origin paper. We construct a capsule network and train on the given dataset. We find that capsule network takes much time to train. We train on a single TITAN X GPU card for one day and get the highest accuracy of 97.9\% on 213rd epoch. The accuracy is higher than 97.3\% achieved by resnet101. Since the capsule network can obtain  information between different parts in an image and achieves equivariance property, the result makes sense. We also test the capsule with image processing. We find that capsule network gets 98.1\% accuracy, which is almost the same as Resnet with processing. That may because the processing is helpful to models without equivariance property such as CNN. However, for capsule that doesn't help much. In general, capsule network performs better than traditional method and CNN models.
 
 
 
