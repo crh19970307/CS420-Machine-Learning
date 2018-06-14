@@ -17,9 +17,8 @@
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Project Overview}{1}{section.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Traditional Models}{1}{section.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Pixel-Level Image Preprocessing}{1}{subsection.2.1}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.1}Timeline Overview}{2}{subsubsection.2.1.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Preprocessing}{1}{section.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Timeline Overview}{2}{subsection.2.1}}
 \newlabel{subfig:original}{{1(a)}{2}{Subfigure 1(a)}{subfigure.1.1}{}}
 \newlabel{sub@subfig:original}{{(a)}{2}{Subfigure 1(a)\relax }{subfigure.1.1}{}}
 \newlabel{subfig:denoised}{{1(b)}{2}{Subfigure 1(b)}{subfigure.1.2}{}}
@@ -34,7 +33,7 @@
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Cropped}}}{2}{figure.1}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {Centered}}}{2}{figure.1}}
 \newlabel{fig:preoverview}{{1}{2}{Preprocessing timeline overview}{figure.1}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2}Step 1: Denoising}{2}{subsubsection.2.1.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Step 1: Denoising}{2}{subsection.2.2}}
 \newlabel{subfig:binary}{{2(a)}{3}{Subfigure 2(a)}{subfigure.2.1}{}}
 \newlabel{sub@subfig:binary}{{(a)}{3}{Subfigure 2(a)\relax }{subfigure.2.1}{}}
 \newlabel{subfig:neighbors}{{2(b)}{3}{Subfigure 2(b)}{subfigure.2.2}{}}
@@ -43,7 +42,7 @@
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Original image}}}{3}{figure.2}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Neighbors}}}{3}{figure.2}}
 \newlabel{fig:DFS}{{2}{3}{White block searching}{figure.2}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.3}Step 2: Cropping}{3}{subsubsection.2.1.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Step 2: Cropping}{3}{subsection.2.3}}
 \newlabel{subfig:bar}{{3(a)}{4}{Subfigure 3(a)}{subfigure.3.1}{}}
 \newlabel{sub@subfig:bar}{{(a)}{4}{Subfigure 3(a)\relax }{subfigure.3.1}{}}
 \newlabel{subfig:cropped2}{{3(b)}{4}{Subfigure 3(b)}{subfigure.3.2}{}}
@@ -52,14 +51,15 @@
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Boundaries}}}{4}{figure.3}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Cropped digit}}}{4}{figure.3}}
 \newlabel{fig:crop}{{3}{4}{Cropping out the digit}{figure.3}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.4}Step 3: Centering}{4}{subsubsection.2.1.4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}K-Nearest Neighbors}{4}{subsection.2.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Step 3: Centering}{4}{subsection.2.4}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces More examples of preprocessing, including failure cases.}}{5}{figure.4}}
 \newlabel{fig:moreexample}{{4}{5}{More examples of preprocessing, including failure cases}{figure.4}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1}Influence of PCA Ratio}{6}{subsubsection.2.2.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces KNN performance under different PCA ratios.}}{6}{figure.5}}
-\newlabel{fig:KNN_PCA}{{5}{6}{KNN performance under different PCA ratios}{figure.5}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2}Influence of K}{7}{subsubsection.2.2.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Traditional Models}{5}{section.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}K-Nearest Neighbors}{5}{subsection.3.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.1}Influence of PCA Ratio}{6}{subsubsection.3.1.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces KNN performance under different PCA ratios.}}{7}{figure.5}}
+\newlabel{fig:KNN_PCA}{{5}{7}{KNN performance under different PCA ratios}{figure.5}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.2}Influence of K}{7}{subsubsection.3.1.2}}
 \newlabel{subfig:1NN}{{6(a)}{7}{Subfigure 6(a)}{subfigure.6.1}{}}
 \newlabel{sub@subfig:1NN}{{(a)}{7}{Subfigure 6(a)\relax }{subfigure.6.1}{}}
 \newlabel{subfig:5NN}{{6(b)}{7}{Subfigure 6(b)}{subfigure.6.2}{}}
@@ -70,105 +70,107 @@
 \newlabel{fig:KNN}{{6}{7}{KNN performance under different values of $k$}{figure.6}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces KNN performance under different values of $k$.}}{8}{figure.7}}
 \newlabel{fig:KNN_K}{{7}{8}{KNN performance under different values of $k$}{figure.7}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.3}Performance under Optimal Parameters}{8}{subsubsection.2.2.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Support Vector Machine}{8}{subsection.2.3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.3}Performance under Optimal Parameters}{8}{subsubsection.3.1.3}}
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces KNN performance with / without preprocessing}}{9}{table.1}}
 \newlabel{tbl:KNN_with_score}{{1}{9}{KNN performance with / without preprocessing}{table.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Support Vector Machine}{9}{subsection.3.2}}
 \@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces SVM performance with / without preprocessing}}{10}{table.2}}
 \newlabel{tbl:SVM_with_score}{{2}{10}{SVM performance with / without preprocessing}{table.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Ensemble Methods}{10}{subsection.2.4}}
 \citation{dvzeroski2004combining}
-\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Voting performance with preprocessing.}}{11}{table.3}}
-\newlabel{tbl:voting}{{3}{11}{Voting performance with preprocessing}{table.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Ensemble Methods}{11}{subsection.3.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Illustration of the voting classifier.}}{11}{figure.8}}
+\newlabel{fig:voting}{{8}{11}{Illustration of the voting classifier}{figure.8}{}}
 \citation{simonyan2014very}
 \citation{he2016deep}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Voting performance with preprocessing.}}{12}{table.3}}
+\newlabel{tbl:voting}{{3}{12}{Voting performance with preprocessing}{table.3}{}}
 \citation{simonyan2014very}
-\@writefile{toc}{\contentsline {section}{\numberline {3}CNN Models}{12}{section.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}SimpleCNN}{12}{subsection.3.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Network architecture of simple CNN }}{12}{figure.8}}
-\newlabel{fig:simplecnn}{{8}{12}{Network architecture of simple CNN}{figure.8}{}}
-\newlabel{subfig:loss-simplecnn}{{9(a)}{13}{Subfigure 9(a)}{subfigure.9.1}{}}
-\newlabel{sub@subfig:loss-simplecnn}{{(a)}{13}{Subfigure 9(a)\relax }{subfigure.9.1}{}}
-\newlabel{subfig:acc-simplecnn}{{9(b)}{13}{Subfigure 9(b)}{subfigure.9.2}{}}
-\newlabel{sub@subfig:acc-simplecnn}{{(b)}{13}{Subfigure 9(b)\relax }{subfigure.9.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Loss and accuracy curve of simple CNN}}{13}{figure.9}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {loss}}}{13}{figure.9}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {accuracy}}}{13}{figure.9}}
-\newlabel{fig:simplecnn-curve}{{9}{13}{Loss and accuracy curve of simple CNN}{figure.9}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}VGG Net}{13}{subsection.3.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Network Architecture of VGG16}}{13}{figure.10}}
-\newlabel{fig:vgg16}{{10}{13}{Network Architecture of VGG16}{figure.10}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}CNN Models}{13}{section.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}SimpleCNN}{13}{subsection.4.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Network architecture of simple CNN }}{13}{figure.9}}
+\newlabel{fig:simplecnn}{{9}{13}{Network architecture of simple CNN}{figure.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}VGG Net}{13}{subsection.4.2}}
 \citation{he2016deep}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Network Configuration of VGG\footnotemark }}{14}{figure.11}}
-\newlabel{fig:vgg}{{11}{14}{Network Configuration of VGG\protect \footnotemark }{figure.11}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Resnet}{14}{subsection.3.3}}
-\newlabel{subfig:loss-vgg}{{12(a)}{15}{Subfigure 12(a)}{subfigure.12.1}{}}
-\newlabel{sub@subfig:loss-vgg}{{(a)}{15}{Subfigure 12(a)\relax }{subfigure.12.1}{}}
-\newlabel{subfig:acc-vgg}{{12(b)}{15}{Subfigure 12(b)}{subfigure.12.2}{}}
-\newlabel{sub@subfig:acc-vgg}{{(b)}{15}{Subfigure 12(b)\relax }{subfigure.12.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Loss and accuracy curve of VGG}}{15}{figure.12}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {loss}}}{15}{figure.12}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {accuracy}}}{15}{figure.12}}
-\newlabel{fig:vgg-curve}{{12}{15}{Loss and accuracy curve of VGG}{figure.12}{}}
+\newlabel{subfig:loss-simplecnn}{{10(a)}{14}{Subfigure 10(a)}{subfigure.10.1}{}}
+\newlabel{sub@subfig:loss-simplecnn}{{(a)}{14}{Subfigure 10(a)\relax }{subfigure.10.1}{}}
+\newlabel{subfig:acc-simplecnn}{{10(b)}{14}{Subfigure 10(b)}{subfigure.10.2}{}}
+\newlabel{sub@subfig:acc-simplecnn}{{(b)}{14}{Subfigure 10(b)\relax }{subfigure.10.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Loss and accuracy curve of simple CNN}}{14}{figure.10}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {loss}}}{14}{figure.10}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {accuracy}}}{14}{figure.10}}
+\newlabel{fig:simplecnn-curve}{{10}{14}{Loss and accuracy curve of simple CNN}{figure.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Network Architecture of VGG16}}{14}{figure.11}}
+\newlabel{fig:vgg16}{{11}{14}{Network Architecture of VGG16}{figure.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Resnet}{14}{subsection.4.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Network Configuration of VGG\footnotemark }}{15}{figure.12}}
+\newlabel{fig:vgg}{{12}{15}{Network Configuration of VGG\protect \footnotemark }{figure.12}{}}
+\newlabel{subfig:loss-vgg}{{13(a)}{16}{Subfigure 13(a)}{subfigure.13.1}{}}
+\newlabel{sub@subfig:loss-vgg}{{(a)}{16}{Subfigure 13(a)\relax }{subfigure.13.1}{}}
+\newlabel{subfig:acc-vgg}{{13(b)}{16}{Subfigure 13(b)}{subfigure.13.2}{}}
+\newlabel{sub@subfig:acc-vgg}{{(b)}{16}{Subfigure 13(b)\relax }{subfigure.13.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Loss and accuracy curve of VGG}}{16}{figure.13}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {loss}}}{16}{figure.13}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {accuracy}}}{16}{figure.13}}
+\newlabel{fig:vgg-curve}{{13}{16}{Loss and accuracy curve of VGG}{figure.13}{}}
+\newlabel{subfig:residual-block}{{14(a)}{16}{Subfigure 14(a)}{subfigure.14.1}{}}
+\newlabel{sub@subfig:residual-block}{{(a)}{16}{Subfigure 14(a)\relax }{subfigure.14.1}{}}
+\newlabel{subfig:bottleneck}{{14(b)}{16}{Subfigure 14(b)}{subfigure.14.2}{}}
+\newlabel{sub@subfig:bottleneck}{{(b)}{16}{Subfigure 14(b)\relax }{subfigure.14.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Structure of Basic Block and Bottleneck\footnotemark }}{16}{figure.14}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Basic Block}}}{16}{figure.14}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Bottleneck}}}{16}{figure.14}}
+\newlabel{fig:basic-block}{{14}{16}{Structure of Basic Block and Bottleneck\protect \footnotemark }{figure.14}{}}
 \citation{hinton2011transforming}
 \citation{sabour2017dynamic}
-\newlabel{subfig:residual-block}{{13(a)}{16}{Subfigure 13(a)}{subfigure.13.1}{}}
-\newlabel{sub@subfig:residual-block}{{(a)}{16}{Subfigure 13(a)\relax }{subfigure.13.1}{}}
-\newlabel{subfig:bottleneck}{{13(b)}{16}{Subfigure 13(b)}{subfigure.13.2}{}}
-\newlabel{sub@subfig:bottleneck}{{(b)}{16}{Subfigure 13(b)\relax }{subfigure.13.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Structure of Basic Block and Bottleneck\footnotemark }}{16}{figure.13}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Basic Block}}}{16}{figure.13}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Bottleneck}}}{16}{figure.13}}
-\newlabel{fig:basic-block}{{13}{16}{Structure of Basic Block and Bottleneck\protect \footnotemark }{figure.13}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Network Configuration of Resnet\footnotemark }}{16}{figure.14}}
-\newlabel{fig:resnet}{{14}{16}{Network Configuration of Resnet\protect \footnotemark }{figure.14}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Comparison}{16}{subsection.3.4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Network Structure of Resnet34\footnotemark }}{17}{figure.15}}
-\newlabel{fig:res34}{{15}{17}{Network Structure of Resnet34\protect \footnotemark }{figure.15}{}}
-\newlabel{subfig:loss-resnet}{{16(a)}{18}{Subfigure 16(a)}{subfigure.16.1}{}}
-\newlabel{sub@subfig:loss-resnet}{{(a)}{18}{Subfigure 16(a)\relax }{subfigure.16.1}{}}
-\newlabel{subfig:acc-resnet}{{16(b)}{18}{Subfigure 16(b)}{subfigure.16.2}{}}
-\newlabel{sub@subfig:acc-resnet}{{(b)}{18}{Subfigure 16(b)\relax }{subfigure.16.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Loss and accuracy curve of Resnet}}{18}{figure.16}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {loss}}}{18}{figure.16}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {accuracy}}}{18}{figure.16}}
-\newlabel{fig:resnet-curve}{{16}{18}{Loss and accuracy curve of Resnet}{figure.16}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Accuracy of all Neural Networks}}{18}{figure.17}}
-\newlabel{fig:acc-total}{{17}{18}{Accuracy of all Neural Networks}{figure.17}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Capsule Networks}{18}{section.4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Loss of all Neural Networks}}{19}{figure.18}}
-\newlabel{fig:loss-total}{{18}{19}{Loss of all Neural Networks}{figure.18}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Res101 performance with / without preprocessing}}{19}{table.4}}
-\newlabel{tbl:resnet_with_score}{{4}{19}{Res101 performance with / without preprocessing}{table.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Intuition behind the Capsule Network}{20}{subsection.4.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces Translational invariance guarantees CNN will recognize the three items as the same, since position does not matter to CNN.\footnotemark }}{20}{figure.19}}
-\newlabel{fig:invariance}{{19}{20}{Translational invariance guarantees CNN will recognize the three items as the same, since position does not matter to CNN.\protect \footnotemark }{figure.19}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Network Configuration of Resnet\footnotemark }}{17}{figure.15}}
+\newlabel{fig:resnet}{{15}{17}{Network Configuration of Resnet\protect \footnotemark }{figure.15}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Comparison}{17}{subsection.4.4}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Res101 performance with / without preprocessing}}{17}{table.4}}
+\newlabel{tbl:resnet_with_score}{{4}{17}{Res101 performance with / without preprocessing}{table.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Network Structure of Resnet34\footnotemark }}{18}{figure.16}}
+\newlabel{fig:res34}{{16}{18}{Network Structure of Resnet34\protect \footnotemark }{figure.16}{}}
+\newlabel{subfig:loss-resnet}{{17(a)}{19}{Subfigure 17(a)}{subfigure.17.1}{}}
+\newlabel{sub@subfig:loss-resnet}{{(a)}{19}{Subfigure 17(a)\relax }{subfigure.17.1}{}}
+\newlabel{subfig:acc-resnet}{{17(b)}{19}{Subfigure 17(b)}{subfigure.17.2}{}}
+\newlabel{sub@subfig:acc-resnet}{{(b)}{19}{Subfigure 17(b)\relax }{subfigure.17.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Loss and accuracy curve of Resnet}}{19}{figure.17}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {loss}}}{19}{figure.17}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {accuracy}}}{19}{figure.17}}
+\newlabel{fig:resnet-curve}{{17}{19}{Loss and accuracy curve of Resnet}{figure.17}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Accuracy of all Neural Networks}}{19}{figure.18}}
+\newlabel{fig:acc-total}{{18}{19}{Accuracy of all Neural Networks}{figure.18}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Capsule Networks}{19}{section.5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces Loss of all Neural Networks}}{20}{figure.19}}
+\newlabel{fig:loss-total}{{19}{20}{Loss of all Neural Networks}{figure.19}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Intuition behind the Capsule Network}{20}{subsection.5.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Translational invariance guarantees CNN will recognize the three items as the same, since position does not matter to CNN.\footnotemark }}{21}{figure.20}}
+\newlabel{fig:invariance}{{20}{21}{Translational invariance guarantees CNN will recognize the three items as the same, since position does not matter to CNN.\protect \footnotemark }{figure.20}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Illustration of the equivariance property.\footnotemark }}{21}{figure.21}}
+\newlabel{fig:equivariance}{{21}{21}{Illustration of the equivariance property.\protect \footnotemark }{figure.21}{}}
 \citation{fukushima1983neocognitron}
-\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Illustration of the equivariance property.\footnotemark }}{21}{figure.20}}
-\newlabel{fig:equivariance}{{20}{21}{Illustration of the equivariance property.\protect \footnotemark }{figure.20}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces CNN classifies both images as human faces because of overly lenient translational invariance.\footnotemark }}{21}{figure.21}}
-\newlabel{fig:maxpooling}{{21}{21}{CNN classifies both images as human faces because of overly lenient translational invariance.\protect \footnotemark }{figure.21}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces The pose matrices associate the parts with the whole.\footnotemark }}{22}{figure.22}}
-\newlabel{fig:partwhole}{{22}{22}{The pose matrices associate the parts with the whole.\protect \footnotemark }{figure.22}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces The estimations based on the eye and the mouth do not match.\footnotemark }}{23}{figure.23}}
-\newlabel{fig:agreement}{{23}{23}{The estimations based on the eye and the mouth do not match.\protect \footnotemark }{figure.23}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Dynamic Routing with Capsules}{23}{subsection.4.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces CNN classifies both images as human faces because of overly lenient translational invariance.\footnotemark }}{22}{figure.22}}
+\newlabel{fig:maxpooling}{{22}{22}{CNN classifies both images as human faces because of overly lenient translational invariance.\protect \footnotemark }{figure.22}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces The pose matrices associate the parts with the whole.\footnotemark }}{23}{figure.23}}
+\newlabel{fig:partwhole}{{23}{23}{The pose matrices associate the parts with the whole.\protect \footnotemark }{figure.23}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces The estimations based on the eye and the mouth do not match.\footnotemark }}{23}{figure.24}}
+\newlabel{fig:agreement}{{24}{23}{The estimations based on the eye and the mouth do not match.\protect \footnotemark }{figure.24}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Dynamic Routing with Capsules}{24}{subsection.5.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces From lower level capsules to higher level ones.}}{24}{figure.25}}
+\newlabel{fig:routing}{{25}{24}{From lower level capsules to higher level ones}{figure.25}{}}
 \citation{sabour2017dynamic}
-\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces From lower level capsules to higher level ones.}}{24}{figure.24}}
-\newlabel{fig:routing}{{24}{24}{From lower level capsules to higher level ones}{figure.24}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces The detailed routing algorithm.}}{24}{figure.25}}
-\newlabel{fig:algorithm}{{25}{24}{The detailed routing algorithm}{figure.25}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}CapsNet Architecture}{25}{subsection.4.3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {26}{\ignorespaces The overall architecture of the Capsule Network.}}{25}{figure.26}}
-\newlabel{fig:architecture}{{26}{25}{The overall architecture of the Capsule Network}{figure.26}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {26}{\ignorespaces The detailed routing algorithm.}}{25}{figure.26}}
+\newlabel{fig:algorithm}{{26}{25}{The detailed routing algorithm}{figure.26}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}CapsNet Architecture}{26}{subsection.5.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {27}{\ignorespaces The overall architecture of the Capsule Network.}}{26}{figure.27}}
+\newlabel{fig:architecture}{{27}{26}{The overall architecture of the Capsule Network}{figure.27}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {28}{\ignorespaces The CapsNet decoder architecture.}}{26}{figure.28}}
+\newlabel{fig:decoder}{{28}{26}{The CapsNet decoder architecture}{figure.28}{}}
 \bibstyle{ieee}
 \bibdata{egbib}
 \bibcite{dvzeroski2004combining}{1}
-\@writefile{lof}{\contentsline {figure}{\numberline {27}{\ignorespaces The CapsNet decoder architecture.}}{26}{figure.27}}
-\newlabel{fig:decoder}{{27}{26}{The CapsNet decoder architecture}{figure.27}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Experiments}{26}{subsection.4.4}}
 \bibcite{fukushima1983neocognitron}{2}
 \bibcite{he2016deep}{3}
 \bibcite{hinton2011transforming}{4}
 \bibcite{sabour2017dynamic}{5}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Experiments}{27}{subsection.5.4}}
 \bibcite{simonyan2014very}{6}
