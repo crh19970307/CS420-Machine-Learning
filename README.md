@@ -4,6 +4,7 @@
 
 * [Summary](#summary)
 * [Prerequisite](#prerequisite)
+* [Preprocessing](#Preprocessing)
 * [Traditional Methods](#traditional-methods)
 * [CNN](#cnn)
 * [Capsule](#capsule)
@@ -13,6 +14,8 @@
 
 ## Summary
 
+We are faced with a classification problem on a modified MNIST handwritten digits data set ([`mnist_test/`](./mnist_test)). This data set contains 60000 training samples and 10000 testing samples. Each data sample is a 45× 45 dimensional binary image.
+
 ## Prerequisite
 
 * Python
@@ -21,7 +24,34 @@
 * Scikit Learn==0.19.1
 * tqdm==4.11.2
 
+## Preprocessing
+
+We preprocess the images to invert the artificial disturbance as follows:
+
+```python
+cd traditional-learning-method
+python3 preprocessing.py
+```
+
+![](./Presentation/preprocessing.png)
+
 ## Traditional Methods
+
+* Enter the [traditional-learning-method/](./traditional-learning-method) folder:
+
+  `cd traditional-learning-method`
+
+* KNN:
+
+  `python3 KNN.py`
+
+* SVM:
+
+  `python3 SVM.py`
+
+* Ensemble method:
+
+  `python3 voting.py`
 
 ## CNN
 
@@ -53,6 +83,17 @@ Usage:
 ```
 
 ## Result
+
+|  Model   | Accuracy / % |         Model          | Accuracy / % |
+| :------: | :----------: | :--------------------: | :----------: |
+|   KNN    |    98.40     | KNN without preprocess |    88.12     |
+|   SVM    |    98.75     | SVM without preprocess |    93.22     |
+| Ensemble |    98.40     |                        |              |
+|  VGGNet  |              |                        |              |
+|  ResNet  |              |                        |              |
+| CapsNet  |              |                        |              |
+
+
 
 ## Structure
 
