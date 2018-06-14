@@ -41,16 +41,16 @@ fig_w = 45
 dx = [-1, 0, 1, 0, -1, 1, 1, -1]
 dy = [0, -1, 0, 1, -1, -1, 1, 1]
 
-data = np.fromfile("mnist_train\\mnist_train_data",dtype=np.uint8)
+data = np.fromfile("../mnist_train/mnist_train_data",dtype=np.uint8)
 X_train = data.reshape(n_samples, -1)
 data = data.reshape(n_samples, fig_w, fig_w)
 
-Y_train = np.fromfile("mnist_train\\mnist_train_label",dtype=np.uint8)
+Y_train = np.fromfile("../mnist_train/mnist_train_label",dtype=np.uint8)
 
-data = np.fromfile("mnist_test\\mnist_test_data",dtype=np.uint8).reshape(10000, fig_w, fig_w)
+data = np.fromfile("../mnist_test/mnist_test_data",dtype=np.uint8).reshape(10000, fig_w, fig_w)
 
-X_test = np.fromfile("mnist_test\\mnist_test_data",dtype=np.uint8).reshape(10000, -1)
-Y_test = np.fromfile("mnist_test\\mnist_test_label" ,dtype=np.uint8)
+X_test = np.fromfile("../mnist_test/mnist_test_data",dtype=np.uint8).reshape(10000, -1)
+Y_test = np.fromfile("../mnist_test/mnist_test_label" ,dtype=np.uint8)
 
 images = np.zeros((10000, 45 * 45), dtype=np.uint8)
 
@@ -106,9 +106,4 @@ for id in range(10000):
 		print(id, ' done')
 	
 images.tofile('new_test_data')
-
-
-
-# save_as_image(arr, 'new.png')
-# save_as_txt(arr, 'new.txt')
 
